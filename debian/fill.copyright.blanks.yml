@@ -1,0 +1,15 @@
+---
+debian/:
+  copyright: |-
+    2005-2009 Chris Lawrence <lawrencc@debian.org>
+    2010-2016 Till Kamppeter <till.kamppeter@gmail.com>
+    2010-2018 Didier Raboud <odyx@debian.org>
+  license: GPL-2
+db/source/PPD/KONICA_MINOLTA/:
+  copyright: 2008, Konica Minolta
+db/source/driver/hpijs-pcl.*\.xml:
+  copyright: 2010, Hewlett-Packard
+db/source/printer/Generic-OAKT_Printer.xml:
+  skip: 1
+db/source/printer/Generic-ZjStream_Printer.xml:
+  skip: 1

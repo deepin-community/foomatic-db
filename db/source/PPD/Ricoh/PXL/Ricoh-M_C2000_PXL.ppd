@@ -1,0 +1,1423 @@
+*PPD-Adobe: "4.3"
+*cupsLanguages: "es fr it no ru tr zh_CN"
+*%
+*%  Printer Description file
+*%    for "RICOH M C2000 PXL"
+*%
+*%    CreationDate: 2020/01/15
+*%    Modified:     2021/01/27
+*%
+*%    COPYRIGHT (C) 2020-2021 RICOH COMPANY, LTD.
+*%    
+*%    Permission is hereby granted, free of charge, to any person obtaining
+*%    a copy of this software and associated documentation files (the
+*%    "Software"), to deal in the Software without restriction, including
+*%    without limitation the rights to use, copy, modify, merge, publish,
+*%    distribute, sublicense, and/or sell copies of the Software, and to
+*%    permit persons to whom the Software is furnished to do so, subject to
+*%    the following conditions:
+*%    
+*%    The above copyright notice and this permission notice shall be
+*%    included in all copies or substantial portions of the Software.
+*%    
+*%    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*%    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*%    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*%    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*%    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*%    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*%    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*%    
+*%    [this is the MIT open source license -- please see www.opensource.org]
+*%
+
+*FileVersion: "1.2"
+*FormatVersion: "4.3"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*ModelName: "RICOH M C2000"
+*PCFileName: "RI9241E3.PPD"
+*Manufacturer: "RICOH"
+*Product: "(RICOH M C2000 PXL)"
+*PSVersion: "(3018.102) 0"
+*ShortNickName: "RICOH M C2000 PXL"
+*NickName: "RICOH M C2000 PXL"
+*1284DeviceID: "MFG:RICOH;MDL:M C2000;CMD:PCLXL;"
+
+*cupsVersion:      1.1
+*cupsManualCopies: True
+*cupsCommands:     ""
+*cupsFilter: "application/vnd.cups-postscript 0 foomatic-rip"
+*cupsFilter: "application/vnd.cups-pdf 0 foomatic-rip"
+
+*FoomaticRIPUserEntityMaxLength: 8
+*FoomaticRIPHostEntityMaxLength: 63
+*FoomaticRIPTitleEntityMaxLength: 40
+*FoomaticRIPCommandLine: "(printf &apos;\033%%-12345X@PJL\n@PJL JOB\n&apos;);
+(gs -q -dBATCH -dPARANOIDSAFER -dNOPAUSE -dNOMEDIAATTRS -dNOINTERPOLATE %B%A%C %D%E%F | sed &quot;s/^\x1b\x25-12345X//&quot; | sed &quot;s/\xc1\x01\x00\xf8\x31\x44/\x44/g&quot;);
+(printf &apos;@PJL\n@PJL EOJ\n\033%%-12345X&apos;)"
+*End
+
+*%========== Basic Device Capabilities ==========
+
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: CMYK
+*FileSystem: True
+*Throughput: "20"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*HWMargins: 12 12 12 12
+
+*%========== Installable Options ==========
+*%========== & System Management ==========
+
+*OpenGroup: InstallableOptions/Installable Options
+
+*OpenUI *OptionTray/Option Tray: PickOne
+*DefaultOptionTray: NotInstalled
+*OptionTray NotInstalled/Not Installed: ""
+*OptionTray SingleTray/Tray 2: ""
+*OptionTray LowerPaperTrays/Tray 2 and 3: ""
+*CloseUI: *OptionTray
+
+*CloseGroup: InstallableOptions
+
+*OpenUI *PageSize/Paper Size: PickOne
+*FoomaticRIPOption PageSize: enum CmdLine C
+*OrderDependency: 20 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize A3/A3 (297 x 420 mm): "%% FoomaticRIPOptionSetting: PageSize=A3"
+*FoomaticRIPOptionSetting PageSize=A3: " -sPAPERSIZE=a3 -sOutputFile=- - "
+*PageSize A4/A4 (210 x 297 mm): "%% FoomaticRIPOptionSetting: PageSize=A4"
+*FoomaticRIPOptionSetting PageSize=A4: " -sPAPERSIZE=a4 -sOutputFile=- - "
+*PageSize A5/A5 (148 x 210 mm): "%% FoomaticRIPOptionSetting: PageSize=A5"
+*FoomaticRIPOptionSetting PageSize=A5: " -sPAPERSIZE=a5 -sOutputFile=- - | sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x0f\xf8\x25/g&quot;"
+*PageSize A6/A6 (105 x 148 mm): "%% FoomaticRIPOptionSetting: PageSize=A6"
+*FoomaticRIPOptionSetting PageSize=A6: " -dDEVICEWIDTHPOINTS=297 -dDEVICEHEIGHTPOINTS=420 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x14\xf8\x25/g&quot;"
+*End
+*PageSize B4/B4 JIS (257 x 364 mm): "%% FoomaticRIPOptionSetting: PageSize=B4"
+*FoomaticRIPOptionSetting PageSize=B4: " -dDEVICEWIDTHPOINTS=729 -dDEVICEHEIGHTPOINTS=1032 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x0a\xf8\x25/g&quot;"
+*End
+*PageSize B5/B5 JIS (182 x 257 mm): "%% FoomaticRIPOptionSetting: PageSize=B5"
+*FoomaticRIPOptionSetting PageSize=B5: " -dDEVICEWIDTHPOINTS=516 -dDEVICEHEIGHTPOINTS=729 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x0b\xf8\x25/g&quot;"
+*End
+*PageSize B6/B6 JIS (128 x 182 mm): "%% FoomaticRIPOptionSetting: PageSize=B6"
+*FoomaticRIPOptionSetting PageSize=B6: " -dDEVICEWIDTHPOINTS=363 -dDEVICEHEIGHTPOINTS=516 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xc9\xf8\x25/g&quot;"
+*End
+*PageSize Tabloid/11x17: "%% FoomaticRIPOptionSetting: PageSize=Tabloid"
+*FoomaticRIPOptionSetting PageSize=Tabloid: " -sPAPERSIZE=11x17  -sOutputFile=- - "
+*PageSize Legal/Legal (8.5 x 14): "%% FoomaticRIPOptionSetting: PageSize=Legal"
+*FoomaticRIPOptionSetting PageSize=Legal: " -sPAPERSIZE=legal -sOutputFile=- - | sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x01\xf8\x25/g&quot;"
+*PageSize FanFoldGermanLegal/8.5x13: "%% FoomaticRIPOptionSetting: PageSize=FanFoldGermanLegal"
+*FoomaticRIPOptionSetting PageSize=FanFoldGermanLegal: " -dDEVICEWIDTHPOINTS=612 -dDEVICEHEIGHTPOINTS=936 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x11\xf8\x25/g&quot;"
+*End
+*PageSize Letter/Letter (8.5 x 11): "%% FoomaticRIPOptionSetting: PageSize=Letter"
+*FoomaticRIPOptionSetting PageSize=Letter: " -sPAPERSIZE=letter -sOutputFile=- - "
+*PageSize GovernmentLG/8.25x14: "%% FoomaticRIPOptionSetting: PageSize=GovernmentLG"
+*FoomaticRIPOptionSetting PageSize=GovernmentLG: " -dDEVICEWIDTHPOINTS=594 -dDEVICEHEIGHTPOINTS=1008 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x15\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x00\x00\x04\x41\x00\x00\x60\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\x15\xf8\x25/g&quot;"
+*End
+*PageSize Folio/8.25x13: "%% FoomaticRIPOptionSetting: PageSize=Folio"
+*FoomaticRIPOptionSetting PageSize=Folio: " -dDEVICEWIDTHPOINTS=594 -dDEVICEHEIGHTPOINTS=936 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x10\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x18\x4b\x04\x41\xde\xdd\x4f\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\x10\xf8\x25/g&quot;"
+*End
+*PageSize F/8x13: "%% FoomaticRIPOptionSetting: PageSize=F"
+*FoomaticRIPOptionSetting PageSize=F: " -dDEVICEWIDTHPOINTS=576 -dDEVICEHEIGHTPOINTS=936 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x12\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x00\x00\x00\x41\x00\x00\x50\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\x12\xf8\x25/g&quot;"
+*End
+*PageSize EngQuatro/8x10: "%% FoomaticRIPOptionSetting: PageSize=EngQuatro"
+*FoomaticRIPOptionSetting PageSize=EngQuatro: " -dDEVICEWIDTHPOINTS=576 -dDEVICEHEIGHTPOINTS=720 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xdd\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x00\x00\x00\x41\x00\x00\x20\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\xdd\xf8\x25/g&quot;"
+*End
+*PageSize Executive/Executive (7.25 x 10.5): "%% FoomaticRIPOptionSetting: PageSize=Executive"
+*FoomaticRIPOptionSetting PageSize=Executive: " -dDEVICEWIDTHPOINTS=522 -dDEVICEHEIGHTPOINTS=756 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x03\xf8\x25/g&quot;"
+*End
+*PageSize Statement/5.5x8.5: "%% FoomaticRIPOptionSetting: PageSize=Statement"
+*FoomaticRIPOptionSetting PageSize=Statement: " -dDEVICEWIDTHPOINTS=396 -dDEVICEHEIGHTPOINTS=612 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x13\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x00\x00\xb0\x40\x00\x00\x08\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\x13\xf8\x25/g&quot;"
+*End
+*PageSize Env10/Com10 Env. (4.125 x 9.5): "%% FoomaticRIPOptionSetting: PageSize=Env10"
+*FoomaticRIPOptionSetting PageSize=Env10: " -dDEVICEWIDTHPOINTS=297 -dDEVICEHEIGHTPOINTS=684 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x06\xf8\x25/g&quot;"
+*End
+*PageSize EnvMonarch/Monarch Env. (3.875 x 7.5): "%% FoomaticRIPOptionSetting: PageSize=EnvMonarch"
+*FoomaticRIPOptionSetting PageSize=EnvMonarch: " -dDEVICEWIDTHPOINTS=279 -dDEVICEHEIGHTPOINTS=540 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x07\xf8\x25/g&quot;"
+*End
+*PageSize EnvC5/C5 Env. (162 x 229 mm): "%% FoomaticRIPOptionSetting: PageSize=EnvC5"
+*FoomaticRIPOptionSetting PageSize=EnvC5: " -dDEVICEWIDTHPOINTS=459 -dDEVICEHEIGHTPOINTS=649 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x08\xf8\x25/g&quot;"
+*End
+*PageSize EnvC6/C6 Env. (114 x 162 mm): "%% FoomaticRIPOptionSetting: PageSize=EnvC6"
+*FoomaticRIPOptionSetting PageSize=EnvC6: " -dDEVICEWIDTHPOINTS=323 -dDEVICEHEIGHTPOINTS=459 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xca\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\xc6\x92\x8f\x40\x00\x00\xcc\x40\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\xca\xf8\x25/g&quot;"
+*End
+*PageSize DLEnv/DL Env. (110 x 220 mm): "%% FoomaticRIPOptionSetting: PageSize=DLEnv"
+*FoomaticRIPOptionSetting PageSize=DLEnv: " -dDEVICEWIDTHPOINTS=312 -dDEVICEHEIGHTPOINTS=624 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\x09\xf8\x25/g&quot;"
+*End
+*PageSize 8Kai/8K (267 x 390 mm): "%% FoomaticRIPOptionSetting: PageSize=8Kai"
+*FoomaticRIPOptionSetting PageSize=8Kai: " -dDEVICEWIDTHPOINTS=757 -dDEVICEHEIGHTPOINTS=1106 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xcb\xf8\x25/g&quot;"
+*End
+*PageSize 16Kai/16K (195 x 267 mm): "%% FoomaticRIPOptionSetting: PageSize=16Kai"
+*FoomaticRIPOptionSetting PageSize=16Kai: " -dDEVICEWIDTHPOINTS=553 -dDEVICEHEIGHTPOINTS=757 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xcc\xf8\x25/g&quot;"
+*End
+*PageSize 11x15/11x15: "%% FoomaticRIPOptionSetting: PageSize=11x15"
+*FoomaticRIPOptionSetting PageSize=11x15: " -dDEVICEWIDTHPOINTS=792 -dDEVICEHEIGHTPOINTS=1080 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xdf\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x00\x00\x30\x41\x00\x00\x70\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\xdf\xf8\x25/g&quot;"
+*End
+*PageSize 10x14/10x14: "%% FoomaticRIPOptionSetting: PageSize=10x14"
+*FoomaticRIPOptionSetting PageSize=10x14: " -dDEVICEWIDTHPOINTS=720 -dDEVICEHEIGHTPOINTS=1008 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xe0\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x00\x00\x20\x41\x00\x00\x60\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\xe0\xf8\x25/g&quot;"
+*End
+*PageSize Oficio/8.5x13.4: "%% FoomaticRIPOptionSetting: PageSize=Oficio"
+*FoomaticRIPOptionSetting PageSize=Oficio: " -dDEVICEWIDTHPOINTS=612 -dDEVICEHEIGHTPOINTS=965 -sOutputFile=- -  | &&
+ sed &quot;s/\xf8\x28\xc0.\xf8\x25/\xf8\x28\xc0\xf1\xf8\x25/g&quot;  | &&
+ sed &quot;s/\xf8\x28\xd5\x00\x00\x08\x41\x0e\x74\x56\x41\xf8\x2f\xc0\x00\xf8\x30/\xf8\x28\xc0\xf1\xf8\x25/g&quot;"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 25 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion A3/A3 (297 x 420 mm): "%% FoomaticRIPOptionSetting: PageSize=A3"
+*PageRegion A4/A4 (210 x 297 mm): "%% FoomaticRIPOptionSetting: PageSize=A4"
+*PageRegion A5/A5 (148 x 210 mm): "%% FoomaticRIPOptionSetting: PageSize=A5"
+*PageRegion A6/A6 (105 x 148 mm): "%% FoomaticRIPOptionSetting: PageSize=A6"
+*PageRegion B4/B4 JIS (257 x 364 mm): "%% FoomaticRIPOptionSetting: PageSize=B4"
+*PageRegion B5/B5 JIS (182 x 257 mm): "%% FoomaticRIPOptionSetting: PageSize=B5"
+*PageRegion B6/B6 JIS (128 x 182 mm): "%% FoomaticRIPOptionSetting: PageSize=B6"
+*PageRegion Tabloid/11x17: "%% FoomaticRIPOptionSetting: PageSize=Tabloid"
+*PageRegion Legal/Legal (8.5 x 14): "%% FoomaticRIPOptionSetting: PageSize=Legal"
+*PageRegion FanFoldGermanLegal/8.5x13: "%% FoomaticRIPOptionSetting: PageSize=FanFoldGermanLegal"
+*PageRegion Letter/Letter (8.5 x 11): "%% FoomaticRIPOptionSetting: PageSize=Letter"
+*PageRegion GovernmentLG/8.25x14: "%% FoomaticRIPOptionSetting: PageSize=GovernmentLG"
+*PageRegion Folio/8.25x13: "%% FoomaticRIPOptionSetting: PageSize=Folio"
+*PageRegion F/8x13: "%% FoomaticRIPOptionSetting: PageSize=F"
+*PageRegion EngQuatro/8x10: "%% FoomaticRIPOptionSetting: PageSize=EngQuatro"
+*PageRegion Executive/Executive (7.25 x 10.5): "%% FoomaticRIPOptionSetting: PageSize=Executive"
+*PageRegion Statement/5.5x8.5: "%% FoomaticRIPOptionSetting: PageSize=Statement"
+*PageRegion Env10/Com10 Env. (4.125 x 9.5): "%% FoomaticRIPOptionSetting: PageSize=Env10"
+*PageRegion EnvMonarch/Monarch Env. (3.875 x 7.5): "%% FoomaticRIPOptionSetting: PageSize=EnvMonarch"
+*PageRegion EnvC5/C5 Env. (162 x 229 mm): "%% FoomaticRIPOptionSetting: PageSize=EnvC5"
+*PageRegion EnvC6/C6 Env. (114 x 162 mm): "%% FoomaticRIPOptionSetting: PageSize=EnvC6"
+*PageRegion DLEnv/DL Env. (110 x 220 mm): "%% FoomaticRIPOptionSetting: PageSize=DLEnv"
+*PageRegion 8Kai/8K (267 x 390 mm): "%% FoomaticRIPOptionSetting: PageSize=8Kai"
+*PageRegion 16Kai/16K (195 x 267 mm): "%% FoomaticRIPOptionSetting: PageSize=16Kai"
+*PageRegion 11x15/11x15: "%% FoomaticRIPOptionSetting: PageSize=11x15"
+*PageRegion 10x14/10x14: "%% FoomaticRIPOptionSetting: PageSize=10x14"
+*PageRegion Oficio/8.5x13.4: "%% FoomaticRIPOptionSetting: PageSize=Oficio"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Letter
+*ImageableArea A3/A3 (297 x 420 mm): "12 12 830 1179"
+*ImageableArea A4/A4 (210 x 297 mm): "12 12 583 830"
+*ImageableArea A5/A5 (148 x 210 mm): "12 12 408 583"
+*ImageableArea A6/A6 (105 x 148 mm): "12 12 285 408"
+*ImageableArea B4/B4 JIS (257 x 364 mm): "12 12 717 1020"
+*ImageableArea B5/B5 JIS (182 x 257 mm): "12 12 504 717"
+*ImageableArea B6/B6 JIS (128 x 182 mm): "12 12 351 504"
+*ImageableArea Tabloid/11 x 17: "12 12 780 1212"
+*ImageableArea Legal/Legal (8.5 x 14): "12 12 600 996"
+*ImageableArea FanFoldGermanLegal/8.5 x 13: "12 12 600 924"
+*ImageableArea Letter/Letter (8.5 x 11): "12 12 600 780"
+*ImageableArea GovernmentLG/8.25 x 14: "12 12 582 996"
+*ImageableArea Folio/8.25 x 13: "12 12 582 924"
+*ImageableArea F/8 x 13: "12 12 564 924"
+*ImageableArea EngQuatro/8 x 10: "12 12 564 708"
+*ImageableArea Executive/Executive (7.25 x 10.5): "12 12 510 744"
+*ImageableArea Statement/5.5 x 8.5: "12 12 384 600"
+*ImageableArea Env10/Com10 Env. (4.125 x 9.5): "12 12 285 672"
+*ImageableArea EnvMonarch/Monarch Env. (3.875 x 7.5): "12 12 267 528"
+*ImageableArea EnvC5/C5 Env. (162 x 229 mm): "12 12 447 637"
+*ImageableArea EnvC6/C6 Env. (114 x 162 mm): "12 12 311 447"
+*ImageableArea DLEnv/DL Env. (110 x 220 mm): "12 12 300 612"
+*ImageableArea 8Kai/8K (267 x 390 mm): "12 12 745 1094"
+*ImageableArea 16Kai/16K (195 x 267 mm): "12 12 541 745"
+*ImageableArea 11x15/11 x 15: "12 12 780 1068"
+*ImageableArea 10x14/10 x 14: "12 12 708 996"
+*ImageableArea Oficio/8.5 x 13.4: "12 12 600 953"
+
+*DefaultPaperDimension: Letter
+*PaperDimension A3/A3 (297 x 420 mm): "842 1191"
+*PaperDimension A4/A4 (210 x 297 mm): "595 842"
+*PaperDimension A5/A5 (148 x 210 mm): "420 595"
+*PaperDimension A6/A6 (105 x 148 mm): "297 420"
+*PaperDimension B4/B4 JIS (257 x 364 mm): "729 1032"
+*PaperDimension B5/B5 JIS (182 x 257 mm): "516 729"
+*PaperDimension B6/B6 JIS (128 x 182 mm): "363 516"
+*PaperDimension Tabloid/11 x 17: "792 1224"
+*PaperDimension Legal/Legal (8.5 x 14): "612 1008"
+*PaperDimension FanFoldGermanLegal/8.5 x 13: "612 936"
+*PaperDimension Letter/Letter (8.5 x 11): "612 792"
+*PaperDimension GovernmentLG/8.25 x 14: "594 1008"
+*PaperDimension Folio/8.25 x 13: "594 936"
+*PaperDimension F/8 x 13: "576 936"
+*PaperDimension EngQuatro/8 x 10: "576 720"
+*PaperDimension Executive/Executive (7.25 x 10.5): "522 756"
+*PaperDimension Statement/5.5 x 8.5: "396 612"
+*PaperDimension Env10/Com10 Env. (4.125 x 9.5): "297 684"
+*PaperDimension EnvMonarch/Monarch Env. (3.875 x 7.5): "279 540"
+*PaperDimension EnvC5/C5 Env. (162 x 229 mm): "459 649"
+*PaperDimension EnvC6/C6 Env. (114 x 162 mm): "323 459"
+*PaperDimension DLEnv/DL Env. (110 x 220 mm): "312 624"
+*PaperDimension 8Kai/8K (267 x 390 mm): "757 1106"
+*PaperDimension 16Kai/16K (195 x 267 mm): "553 757"
+*PaperDimension 11x15/11 x 15: "792 1080"
+*PaperDimension 10x14/10 x 14: "720 1008"
+*PaperDimension Oficio/8.5 x 13.4: "612 965"
+
+*OpenGroup: Paper/Paper
+
+*OpenUI *MediaType/Paper Type: PickOne
+*FoomaticRIPOption MediaType: enum JCL A
+*OrderDependency: 205 AnySetup *MediaType
+*DefaultMediaType: Auto
+*MediaType Auto/Plain/Recycled: "%% FoomaticRIPOptionSetting: MediaType=Auto"
+*FoomaticRIPOptionSetting MediaType=Auto: "SET MEDIATYPE=PLAINORRECYCLED"
+*MediaType Thin/Thin (52 - 59 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Thin"
+*FoomaticRIPOptionSetting MediaType=Thin: "SET MEDIATYPE=THIN"
+*MediaType Plain1/Plain 1 (60 - 74 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Plain1"
+*FoomaticRIPOptionSetting MediaType=Plain1: "SET MEDIATYPE=PLAIN"
+*MediaType Plain2/Plain 2 (75 - 81 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Plain2"
+*FoomaticRIPOptionSetting MediaType=Plain2: "SET MEDIATYPE=PLAIN2"
+*MediaType Middlethick/Middle Thick (82 - 105 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Middlethick"
+*FoomaticRIPOptionSetting MediaType=Middlethick: "SET MEDIATYPE=MIDDLETHICK"
+*MediaType Thick1/Thick 1 (106 - 169 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Thick1"
+*FoomaticRIPOptionSetting MediaType=Thick1: "SET MEDIATYPE=THICK"
+*MediaType Thick2/Thick 2 (170 - 220 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Thick2"
+*FoomaticRIPOptionSetting MediaType=Thick2: "SET MEDIATYPE=THICK2"
+*MediaType Thick3/Thick 3 (221 - 256 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Thick3"
+*FoomaticRIPOptionSetting MediaType=Thick3: "SET MEDIATYPE=THICK3"
+*MediaType Thick4/Thick 4 (257 - 300 g/m2): "%% FoomaticRIPOptionSetting: MediaType=Thick4"
+*FoomaticRIPOptionSetting MediaType=Thick4: "SET MEDIATYPE=THICK4"
+*MediaType Recycled/Recycled: "%% FoomaticRIPOptionSetting: MediaType=Recycled"
+*FoomaticRIPOptionSetting MediaType=Recycled: "SET MEDIATYPE=RECYCLED"
+*MediaType Colored/Color: "%% FoomaticRIPOptionSetting: MediaType=Colored"
+*FoomaticRIPOptionSetting MediaType=Colored: "SET MEDIATYPE=COLOR"
+*MediaType Special1/Special 1: "%% FoomaticRIPOptionSetting: MediaType=Special1"
+*FoomaticRIPOptionSetting MediaType=Special1: "SET MEDIATYPE=SPECIAL"
+*MediaType Special2/Special 2: "%% FoomaticRIPOptionSetting: MediaType=Special2"
+*FoomaticRIPOptionSetting MediaType=Special2: "SET MEDIATYPE=SPECIAL2"
+*MediaType Special3/Special 3: "%% FoomaticRIPOptionSetting: MediaType=Special3"
+*FoomaticRIPOptionSetting MediaType=Special3: "SET MEDIATYPE=SPECIAL3"
+*MediaType Letterhead/Letterhead: "%% FoomaticRIPOptionSetting: MediaType=Letterhead"
+*FoomaticRIPOptionSetting MediaType=Letterhead: "SET MEDIATYPE=LETTERHEAD"
+*MediaType Preprinted/Preprinted: "%% FoomaticRIPOptionSetting: MediaType=Preprinted"
+*FoomaticRIPOptionSetting MediaType=Preprinted: "SET MEDIATYPE=PREPRINTED"
+*MediaType Bond/Bond: "%% FoomaticRIPOptionSetting: MediaType=Bond"
+*FoomaticRIPOptionSetting MediaType=Bond: "SET MEDIATYPE=BOND"
+*MediaType Cardstock/Cardstock: "%% FoomaticRIPOptionSetting: MediaType=Cardstock"
+*FoomaticRIPOptionSetting MediaType=Cardstock: "SET MEDIATYPE=CARDSTOCK"
+*MediaType OHP/Transparency: "%% FoomaticRIPOptionSetting: MediaType=OHP"
+*FoomaticRIPOptionSetting MediaType=OHP: "SET MEDIATYPE=TRANSPARENCY"
+*MediaType Labels/Labels: "%% FoomaticRIPOptionSetting: MediaType=Labels"
+*FoomaticRIPOptionSetting MediaType=Labels: "SET MEDIATYPE=LABELS"
+*MediaType Envelope/Envelope: "%% FoomaticRIPOptionSetting: MediaType=Envelope"
+*FoomaticRIPOptionSetting MediaType=Envelope: "SET MEDIATYPE=ENVELOPE"
+*MediaType MatCoated/Coated (Matte): "%% FoomaticRIPOptionSetting: MediaType=MatCoated"
+*FoomaticRIPOptionSetting MediaType=MatCoated: "SET MEDIATYPE=MATCOATED"
+*MediaType GlossCoated/Coated (Glossy): "%% FoomaticRIPOptionSetting: MediaType=GlossCoated"
+*FoomaticRIPOptionSetting MediaType=GlossCoated: "SET MEDIATYPE=GLOSSYCOATED"
+*CloseUI: *MediaType
+
+*CloseGroup: Paper
+
+*OpenUI *Duplex/Duplex: PickOne
+*FoomaticRIPOption Duplex: enum Composite D
+*OrderDependency: 50 AnySetup *Duplex
+*DefaultDuplex: DuplexNoTumble
+*Duplex None/Off:  "%% FoomaticRIPOptionSetting: Duplex=None"
+*FoomaticRIPOptionSetting Duplex=None: "JCLDuplex=None GSDuplex=None"
+*Duplex DuplexNoTumble/Long Edge:  "%% FoomaticRIPOptionSetting: Duplex=DuplexNoTumble"
+*FoomaticRIPOptionSetting Duplex=DuplexNoTumble: "JCLDuplex=DuplexNoTumble GSDuplex=DuplexNoTumble"
+*Duplex DuplexTumble/Short Edge:  "%% FoomaticRIPOptionSetting: Duplex=DuplexTumble"
+*FoomaticRIPOptionSetting Duplex=DuplexTumble: "JCLDuplex=DuplexTumble GSDuplex=DuplexTumble"
+*CloseUI: *Duplex
+
+*FoomaticRIPOptionSetting Duplex=0: "JCLDuplex=None GSDuplex=None"
+*FoomaticRIPOptionSetting Duplex=LongEdge: "JCLDuplex=DuplexNoTumble GSDuplex=DuplexNoTumble"
+*FoomaticRIPOptionSetting Duplex=ShortEdge: "JCLDuplex=DuplexTumble GSDuplex=DuplexTumble"
+
+*FoomaticRIPOption GSDuplex: enum CmdLine D 50
+*FoomaticRIPOptionSetting GSDuplex=FromDuplex: ""
+*FoomaticRIPOptionSetting GSDuplex=None: ""
+*FoomaticRIPOptionSetting GSDuplex=DuplexNoTumble: "| sed &quot;s/\(\xf8.\xc0\)\x00\xf8\x34/\1\x01\xf8\x35/g&quot;"
+*FoomaticRIPOptionSetting GSDuplex=DuplexTumble: "| sed &quot;s/\(\xf8.\xc0\x00\xf8\)\x34/\1\x35/g&quot;"
+
+*FoomaticRIPOption JCLDuplex: enum JCL D 50
+*FoomaticRIPOptionSetting JCLDuplex=FromDuplex: ""
+*FoomaticRIPOptionSetting JCLDuplex=None: "SET DUPLEX=OFF"
+*FoomaticRIPOptionSetting JCLDuplex=DuplexNoTumble: "SET DUPLEX=ON
+@PJL SET BINDING=LONGEDGE"
+*FoomaticRIPOptionSetting JCLDuplex=DuplexTumble: "SET DUPLEX=ON
+@PJL SET BINDING=SHORTEDGE"
+
+*OpenUI *InputSlot/Paper Source: PickOne
+*FoomaticRIPOption InputSlot: enum CmdLine E
+*OrderDependency: 30 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Auto Tray Select: "%% FoomaticRIPOptionSetting: InputSlot=Auto"
+*FoomaticRIPOptionSetting InputSlot=Auto: ""
+*InputSlot MultiTray/Bypass Tray: "%% FoomaticRIPOptionSetting: InputSlot=MultiTray"
+*FoomaticRIPOptionSetting InputSlot=MultiTray: " | sed &quot;s/\xf8\x25\xc0[\x00\x01]\xf8/\xf8\x25\xc0\x02\xf8/g&quot;"
+*InputSlot 1Tray/Tray 1: "%% FoomaticRIPOptionSetting: InputSlot=1Tray"
+*FoomaticRIPOptionSetting InputSlot=1Tray: " | sed &quot;s/\xf8\x25\xc0[\x00\x01]\xf8/\xf8\x25\xc0\x04\xf8/g&quot;"
+*InputSlot 2Tray/Tray 2: "%% FoomaticRIPOptionSetting: InputSlot=2Tray"
+*FoomaticRIPOptionSetting InputSlot=2Tray: " | sed &quot;s/\xf8\x25\xc0[\x00\x01]\xf8/\xf8\x25\xc0\x05\xf8/g&quot;"
+*InputSlot 3Tray/Tray 3: "%% FoomaticRIPOptionSetting: InputSlot=3Tray"
+*FoomaticRIPOptionSetting InputSlot=3Tray: " | sed &quot;s/\xf8\x25\xc0[\x00\x01]\xf8/\xf8\x25\xc0\x07\xf8/g&quot;"
+*CloseUI: *InputSlot
+
+*OpenUI *RPSColorRendDict/Color Profile: PickOne
+*FoomaticRIPOption RPSColorRendDict: enum CmdLine F
+*OrderDependency: 40 AnySetup *RPSColorRendDict
+*DefaultRPSColorRendDict: Off
+*RPSColorRendDict Off/Off: "%% FoomaticRIPOptionSetting: RPSColorRendDict=Off"
+*FoomaticRIPOptionSetting RPSColorRendDict=Off: " | sed &quot;s/\(\xc0.\xf8.\x43\)/\1\xc0\x00\xf8\x78\x58/g&quot;"
+*RPSColorRendDict Photograph/Photographic: "%% FoomaticRIPOptionSetting: RPSColorRendDict=Photograph"
+*FoomaticRIPOptionSetting RPSColorRendDict=Photograph: " | sed &quot;s/\(\xc0.\xf8.\x43\)/\1\xc0\x04\xf8\x78\x58/g&quot;"
+*RPSColorRendDict Business/Presentation: "%% FoomaticRIPOptionSetting: RPSColorRendDict=Business"
+*FoomaticRIPOptionSetting RPSColorRendDict=Business: " | sed &quot;s/\(\xc0.\xf8.\x43\)/\1\xc0\x01\xf8\x78\x58/g&quot;"
+*RPSColorRendDict text/Text: "%% FoomaticRIPOptionSetting: RPSColorRendDict=text"
+*FoomaticRIPOptionSetting RPSColorRendDict=text: " | sed &quot;s/\(\xc0.\xf8.\x43\)/\1\xc0\x03\xf8\x78\x58/g&quot;"
+*RPSColorRendDict POP/POP Display: "%% FoomaticRIPOptionSetting: RPSColorRendDict=POP"
+*FoomaticRIPOptionSetting RPSColorRendDict=POP: " | sed &quot;s/\(\xc0.\xf8.\x43\)/\1\xc0\x0a\xf8\x78\x58/g&quot;"
+*RPSColorRendDict Red/Custom Red: "%% FoomaticRIPOptionSetting: RPSColorRendDict=Red"
+*FoomaticRIPOptionSetting RPSColorRendDict=Red: " | sed &quot;s/\(\xc0.\xf8.\x43\)/\1\xc0\x11\xf8\x78\x58/g&quot;"
+*CloseUI: *RPSColorRendDict
+
+*OpenGroup: Basic/Basic
+*OpenUI *ColorModel/Color Mode: PickOne
+*FoomaticRIPOption ColorModel: enum Composite B
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: Color
+*ColorModel Color/Color: "%% FoomaticRIPOptionSetting: ColorModel=Color"
+*FoomaticRIPOptionSetting ColorModel=Color: "JCLDatamode=Color GSCmdLine=Color"
+*ColorModel Grayscale/Black and White: "%% FoomaticRIPOptionSetting: ColorModel=Grayscale"
+*FoomaticRIPOptionSetting ColorModel=Grayscale: "JCLDatamode=Grayscale GSCmdLine=Grayscale"
+*CloseUI: *ColorModel
+
+*FoomaticRIPOption GSCmdLine: enum CmdLine B 10
+*FoomaticRIPOptionSetting GSCmdLine=FromColorModel: ""
+*FoomaticRIPOptionSetting GSCmdLine=Color: " -sDEVICE=pxlcolor"
+*End
+*FoomaticRIPOptionSetting GSCmdLine=Grayscale: " -sDEVICE=pxlmono"
+*End
+
+*FoomaticRIPOption JCLDatamode: enum JCL B 10
+*FoomaticRIPOptionSetting JCLDatamode=FromColorModel: ""
+*FoomaticRIPOptionSetting JCLDatamode=Color: "SET DRIVERKINDINFO=PCL6
+@PJL SET DATAMODE=COLOR"
+*FoomaticRIPOptionSetting JCLDatamode=Grayscale: "SET DRIVERKINDINFO=PCL6
+@PJL SET DATAMODE=GRAYSCALE"
+
+*CloseGroup: Basic
+
+*OpenGroup: PrintQuality/Print Quality
+
+*OpenUI *Resolution/Resolution: PickOne
+*FoomaticRIPOption Resolution: enum Composite A
+*OrderDependency: 15 AnySetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 600dpi/600 dpi:  "%% FoomaticRIPOptionSetting: Resolution=600dpi"
+*FoomaticRIPOptionSetting Resolution=600dpi: "JCLResolution=600dpi GSResolution=600dpi"
+*Resolution 1200dpi/1200 dpi:  "%% FoomaticRIPOptionSetting: Resolution=1200dpi"
+*FoomaticRIPOptionSetting Resolution=1200dpi: "JCLResolution=1200dpi GSResolution=1200dpi"
+*CloseUI: *Resolution
+
+*FoomaticRIPOption GSResolution: enum CmdLine A 15
+*FoomaticRIPOptionSetting GSResolution=FromResolution: ""
+*FoomaticRIPOptionSetting GSResolution=600dpi: " -r600x600"
+*FoomaticRIPOptionSetting GSResolution=1200dpi: " -r1200x1200"
+
+*FoomaticRIPOption JCLResolution: enum JCL A 15
+*FoomaticRIPOptionSetting JCLResolution=FromResolution: ""
+*FoomaticRIPOptionSetting JCLResolution=600dpi: "SET RESOLUTION=600"
+*FoomaticRIPOptionSetting JCLResolution=1200dpi: "SET RESOLUTION=1200"
+
+*OpenUI *RPSBitsPerDot/Gradation: PickOne
+*FoomaticRIPOption RPSBitsPerDot: enum JCL A
+*OrderDependency: 41 AnySetup *RPSBitsPerDot
+*DefaultRPSBitsPerDot: 1BitsPerDot
+*RPSBitsPerDot 2BitsPerDot/Standard: "%% FoomaticRIPOptionSetting: RPSBitsPerDot=2BitsPerDot"
+*FoomaticRIPOptionSetting RPSBitsPerDot=2BitsPerDot: "SET BITSPERDOT=2"
+*RPSBitsPerDot 1BitsPerDot/Fast: "%% FoomaticRIPOptionSetting: RPSBitsPerDot=1BitsPerDot"
+*FoomaticRIPOptionSetting RPSBitsPerDot=1BitsPerDot: "SET BITSPERDOT=1"
+*RPSBitsPerDot 4BitsPerDot/Fine: "%% FoomaticRIPOptionSetting: RPSBitsPerDot=4BitsPerDot"
+*FoomaticRIPOptionSetting RPSBitsPerDot=4BitsPerDot: "SET BITSPERDOT=4"
+*CloseUI: *RPSBitsPerDot
+
+*OpenUI *RIPrintMode/Economy Color: PickOne
+*FoomaticRIPOption RIPrintMode: enum JCL A
+*OrderDependency: 45 AnySetup *RIPrintMode
+*DefaultRIPrintMode: OFF
+*RIPrintMode OFF/Off: "%% FoomaticRIPOptionSetting: RIPrintMode=OFF"
+*FoomaticRIPOptionSetting RIPrintMode=OFF: "SET ECONOMODE=OFF"
+*RIPrintMode ON/On: "%% FoomaticRIPOptionSetting: RIPrintMode=ON"
+*FoomaticRIPOptionSetting RIPrintMode=ON: "SET ECONOMODE=ON"
+*CloseUI: *RIPrintMode
+
+*CloseGroup: PrintQuality
+
+*%========== Font ==========
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(1.05)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(1.05)" Standard ROM
+*Font AvantGarde-Demi: Standard "(1.05)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(1.05)" Standard ROM
+*Font Bookman-Demi: Standard "(1.05)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(1.05)" Standard ROM
+*Font Bookman-Light: Standard "(1.05)" Standard ROM
+*Font Bookman-LightItalic: Standard "(1.05)" Standard ROM
+*Font Courier: Standard "(1.05)" Standard ROM
+*Font Courier-Bold: Standard "(1.05)" Standard ROM
+*Font Courier-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Courier-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica: Standard "(1.05)" Standard ROM
+*Font Helvetica-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(1.05)" Standard ROM
+*Font Helvetica-Oblique: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(1.05)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(1.05)" Standard ROM
+*Font Palatino-Bold: Standard "(1.05)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Palatino-Italic: Standard "(1.05)" Standard ROM
+*Font Palatino-Roman: Standard "(1.05)" Standard ROM
+*Font Symbol: Special "(001.005)" Special ROM
+*Font Times-Bold: Standard "(1.05)" Standard ROM
+*Font Times-BoldItalic: Standard "(1.05)" Standard ROM
+*Font Times-Italic: Standard "(1.05)" Standard ROM
+*Font Times-Roman: Standard "(1.05)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(1.05)" Standard ROM
+*Font ZapfDingbats: Special "(001.005)" Special ROM
+
+*%========== UI Constraints ==========
+
+*%========== Media Type/Input Tray ==========
+*UIConstraints: *MediaType Thin *InputSlot 1Tray
+*UIConstraints: *InputSlot 1Tray *MediaType Thin
+*UIConstraints: *MediaType Thin *InputSlot 2Tray
+*UIConstraints: *InputSlot 2Tray *MediaType Thin
+*UIConstraints: *MediaType Thin *InputSlot 3Tray
+*UIConstraints: *InputSlot 3Tray *MediaType Thin
+*UIConstraints: *MediaType OHP *InputSlot 1Tray
+*UIConstraints: *InputSlot 1Tray *MediaType OHP
+*UIConstraints: *MediaType OHP *InputSlot 2Tray
+*UIConstraints: *InputSlot 2Tray *MediaType OHP
+*UIConstraints: *MediaType OHP *InputSlot 3Tray
+*UIConstraints: *InputSlot 3Tray *MediaType OHP
+
+*%========== Media Type/Duplex ==========
+*UIConstraints: *MediaType Thick2 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Thick2
+*UIConstraints: *MediaType Thick2 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType Thick2
+*UIConstraints: *MediaType Thick3 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Thick3
+*UIConstraints: *MediaType Thick3 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType Thick3
+*UIConstraints: *MediaType Thick4 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Thick4
+*UIConstraints: *MediaType Thick4 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType Thick4
+*UIConstraints: *MediaType OHP *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType OHP
+*UIConstraints: *MediaType OHP *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType OHP
+*UIConstraints: *MediaType Labels *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Labels
+*UIConstraints: *MediaType Labels *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType Labels
+*UIConstraints: *MediaType Envelope *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Envelope
+*UIConstraints: *MediaType Envelope *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType Envelope
+*UIConstraints: *MediaType MatCoated *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType MatCoated
+*UIConstraints: *MediaType MatCoated *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType MatCoated
+*UIConstraints: *MediaType GlossCoated *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType GlossCoated
+*UIConstraints: *MediaType GlossCoated *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType GlossCoated
+
+*%========== Option Tray/Input Tray ==========
+*UIConstraints: *OptionTray NotInstalled *InputSlot 2Tray
+*UIConstraints: *InputSlot 2Tray *OptionTray NotInstalled
+*UIConstraints: *OptionTray NotInstalled *InputSlot 3Tray
+*UIConstraints: *InputSlot 3Tray *OptionTray NotInstalled
+*UIConstraints: *OptionTray SingleTray *InputSlot 3Tray
+*UIConstraints: *InputSlot 3Tray *OptionTray SingleTray
+
+*%========== Resolution/Gradation ==========
+*UIConstraints: *Resolution 1200dpi *RPSBitsPerDot 2BitsPerDot
+*UIConstraints: *RPSBitsPerDot 2BitsPerDot *Resolution 1200dpi
+*UIConstraints: *Resolution 1200dpi *RPSBitsPerDot 4BitsPerDot
+*UIConstraints: *RPSBitsPerDot 4BitsPerDot *Resolution 1200dpi
+
+*% end of Printer Description file
+*% French localization
+*fr.Translation ModelName/RICOH M C2000: ""
+*fr.Translation PageSize/Format papier: ""
+*fr.PageSize A3/A3 (297 x 420 mm): ""
+*fr.PageSize A4/A4 (210 x 297 mm): ""
+*fr.PageSize A5/A5 (148 x 210 mm): ""
+*fr.PageSize A6/A6 (105 x 148 mm): ""
+*fr.PageSize B4/B4 JIS (257 x 364 mm): ""
+*fr.PageSize B5/B5 JIS (182 x 257 mm): ""
+*fr.PageSize B6/B6 JIS (128 x 182 mm): ""
+*fr.PageSize Tabloid/11 x 17: ""
+*fr.PageSize Legal/Legal (8,5 x 14): ""
+*fr.PageSize FanFoldGermanLegal/8,5 x 13: ""
+*fr.PageSize Letter/Letter (8,5 x 11): ""
+*fr.PageSize GovernmentLG/8,25 x 14: ""
+*fr.PageSize Folio/8,25 x 13: ""
+*fr.PageSize F/8 x 13: ""
+*fr.PageSize EngQuatro/8 x 10: ""
+*fr.PageSize Executive/Executive (7,25 x 10,5): ""
+*fr.PageSize Statement/5,5 x 8,5: ""
+*fr.PageSize Env10/Com10 Env. (4,125 x 9,5): ""
+*fr.PageSize EnvMonarch/Env. Monarch (3,875 x 7,5): ""
+*fr.PageSize EnvC5/Env. C5 (162 x 229 mm): ""
+*fr.PageSize EnvC6/Env. C6 (114 x 162 mm): ""
+*fr.PageSize DLEnv/Env. DL (110 x 220 mm): ""
+*fr.PageSize 8Kai/8K (267 x 390 mm): ""
+*fr.PageSize 16Kai/16K (195 x 267 mm): ""
+*fr.PageSize 11x15/11 x 15: ""
+*fr.PageSize 10x14/10 x 14: ""
+*fr.PageSize Oficio/8,5 x 13,4: ""
+*fr.Translation PageRegion/PageRegion: ""
+*fr.PageRegion A3/A3 (297 x 420 mm): ""
+*fr.PageRegion A4/A4 (210 x 297 mm): ""
+*fr.PageRegion A5/A5 (148 x 210 mm): ""
+*fr.PageRegion A6/A6 (105 x 148 mm): ""
+*fr.PageRegion B4/B4 JIS (257 x 364 mm): ""
+*fr.PageRegion B5/B5 JIS (182 x 257 mm): ""
+*fr.PageRegion B6/B6 JIS (128 x 182 mm): ""
+*fr.PageRegion Tabloid/11 x 17: ""
+*fr.PageRegion Legal/Legal (8,5 x 14): ""
+*fr.PageRegion FanFoldGermanLegal/8,5 x 13: ""
+*fr.PageRegion Letter/Letter (8,5 x 11): ""
+*fr.PageRegion GovernmentLG/8,25 x 14: ""
+*fr.PageRegion Folio/8,25 x 13: ""
+*fr.PageRegion F/8 x 13: ""
+*fr.PageRegion EngQuatro/8 x 10: ""
+*fr.PageRegion Executive/Executive (7,25 x 10,5): ""
+*fr.PageRegion Statement/5,5 x 8,5: ""
+*fr.PageRegion Env10/Com10 Env. (4,125 x 9,5): ""
+*fr.PageRegion EnvMonarch/Env. Monarch (3,875 x 7,5): ""
+*fr.PageRegion EnvC5/Env. C5 (162 x 229 mm): ""
+*fr.PageRegion EnvC6/Env. C6 (114 x 162 mm): ""
+*fr.PageRegion DLEnv/Env. DL (110 x 220 mm): ""
+*fr.PageRegion 8Kai/8K (267 x 390 mm): ""
+*fr.PageRegion 16Kai/16K (195 x 267 mm): ""
+*fr.PageRegion 11x15/11 x 15: ""
+*fr.PageRegion 10x14/10 x 14: ""
+*fr.PageRegion Oficio/8,5 x 13,4: ""
+*fr.Translation Duplex/Recto/Verso: ""
+*fr.Duplex None/OFF: ""
+*fr.Duplex DuplexNoTumble/Bord Long: ""
+*fr.Duplex DuplexTumble/Bord Court: ""
+*fr.Translation InputSlot/Source d'alimentation papier: ""
+*fr.InputSlot MultiTray/Bypass: ""
+*fr.InputSlot 1Tray/Magasin 1: ""
+*fr.InputSlot 2Tray/Magasin 2: ""
+*fr.InputSlot 3Tray/Magasin 3: ""
+*fr.InputSlot Auto/Sélection automatique du magasin: ""
+*fr.Translation Basic/Basique: ""
+*fr.Translation ColorModel/Mode couleur: ""
+*fr.ColorModel Color/Couleur: ""
+*fr.ColorModel Grayscale/Noir et Blanc: ""
+*fr.Translation InstallableOptions/Options installables: ""
+*fr.Translation OptionTray/Magasin en option: ""
+*fr.OptionTray NotInstalled/Non installé: ""
+*fr.OptionTray SingleTray/Magasin 2: ""
+*fr.OptionTray LowerPaperTrays/Magasin 2 et 3: ""
+*fr.Translation Paper/Papier: ""
+*fr.Translation MediaType/Type de papier: ""
+*fr.MediaType Auto/Ordinaire/Recyclé: ""
+*fr.MediaType Thin/Fin (52 - 59 g/m2): ""
+*fr.MediaType Plain1/Ordinaire 1 (60 - 74 g/m2): ""
+*fr.MediaType Plain2/Ordinaire 2 (75 - 81 g/m2): ""
+*fr.MediaType Middlethick/Épaisseur moyenne (82 - 105 g/m2): ""
+*fr.MediaType Thick1/Épais 1 (106 - 169 g/m2): ""
+*fr.MediaType Thick2/Épais 2 (170 - 220 g/m2): ""
+*fr.MediaType Thick3/Épais 3 (221 - 256 g/m2): ""
+*fr.MediaType Thick4/Épais 4 (257 - 300 g/m2): ""
+*fr.MediaType Recycled/Recyclé: ""
+*fr.MediaType Colored/Couleur: ""
+*fr.MediaType Special1/Spécial 1: ""
+*fr.MediaType Special2/Spécial 2: ""
+*fr.MediaType Special3/Spécial 3: ""
+*fr.MediaType Letterhead/Papier à en-tête: ""
+*fr.MediaType Preprinted/Préimprimé: ""
+*fr.MediaType Bond/Papier Bond: ""
+*fr.MediaType Cardstock/Papier cartonné: ""
+*fr.MediaType OHP/Transparence: ""
+*fr.MediaType Labels/Étiquettes: ""
+*fr.MediaType Envelope/Enveloppe: ""
+*fr.MediaType MatCoated/Couché (Mat): ""
+*fr.MediaType GlossCoated/Couché (Brillant): ""
+*fr.Translation PrintQuality/Qualité d'impression: ""
+*fr.Translation Resolution/Résolution: ""
+*fr.Resolution 600dpi/600 dpi: ""
+*fr.Resolution 1200dpi/1200 dpi: ""
+*fr.Translation RPSBitsPerDot/Dégradé: ""
+*fr.RPSBitsPerDot 2BitsPerDot/Standard: ""
+*fr.RPSBitsPerDot 1BitsPerDot/Rapide: ""
+*fr.RPSBitsPerDot 4BitsPerDot/Fin: ""
+*fr.Translation RIPrintMode/Economy Color: ""
+*fr.RIPrintMode OFF/OFF: ""
+*fr.RIPrintMode ON/ON: ""
+*fr.Translation RPSColorRendDict/Profil couleurs: ""
+*fr.RPSColorRendDict Off/OFF: ""
+*fr.RPSColorRendDict Photograph/Photographique: ""
+*fr.RPSColorRendDict Business/Présentation: ""
+*fr.RPSColorRendDict text/Texte: ""
+*fr.RPSColorRendDict POP/Affichage PDV: ""
+*fr.RPSColorRendDict Red/Rouge personnalisé: ""
+*% Italian localization
+*it.Translation ModelName/RICOH M C2000: ""
+*it.Translation PageSize/Formato carta: ""
+*it.PageSize A3/A3 (297 x 420 mm): ""
+*it.PageSize A4/A4 (210 x 297 mm): ""
+*it.PageSize A5/A5 (148 x 210 mm): ""
+*it.PageSize A6/A6 (105 x 148 mm): ""
+*it.PageSize B4/B4 JIS (257 x 364 mm): ""
+*it.PageSize B5/B5 JIS (182 x 257 mm): ""
+*it.PageSize B6/B6 JIS (128 x 182 mm): ""
+*it.PageSize Tabloid/11 x 17: ""
+*it.PageSize Legal/Legal (8,5 x 14): ""
+*it.PageSize FanFoldGermanLegal/8,5 x 13: ""
+*it.PageSize Letter/Letter (8,5 x 11): ""
+*it.PageSize GovernmentLG/8,25 x 14: ""
+*it.PageSize Folio/8,25 x 13: ""
+*it.PageSize F/8 x 13: ""
+*it.PageSize EngQuatro/8 x 10: ""
+*it.PageSize Executive/Executive (7,25 x 10,5): ""
+*it.PageSize Statement/5,5 x 8,5: ""
+*it.PageSize Env10/Busta Com10 (4,125 x 9,5): ""
+*it.PageSize EnvMonarch/Busta Monarch (3,875 x 7,5): ""
+*it.PageSize EnvC5/Busta C5 (162 x 229 mm): ""
+*it.PageSize EnvC6/Busta C6 (114 x 162 mm): ""
+*it.PageSize DLEnv/Busta DL (110 x 220 mm): ""
+*it.PageSize 8Kai/8K (267 x 390 mm): ""
+*it.PageSize 16Kai/16K (195 x 267 mm): ""
+*it.PageSize 11x15/11 x 15: ""
+*it.PageSize 10x14/10 x 14: ""
+*it.PageSize Oficio/8,5 x 13,4: ""
+*it.Translation PageRegion/PageRegion: ""
+*it.PageRegion A3/A3 (297 x 420 mm): ""
+*it.PageRegion A4/A4 (210 x 297 mm): ""
+*it.PageRegion A5/A5 (148 x 210 mm): ""
+*it.PageRegion A6/A6 (105 x 148 mm): ""
+*it.PageRegion B4/B4 JIS (257 x 364 mm): ""
+*it.PageRegion B5/B5 JIS (182 x 257 mm): ""
+*it.PageRegion B6/B6 JIS (128 x 182 mm): ""
+*it.PageRegion Tabloid/11 x 17: ""
+*it.PageRegion Legal/Legal (8,5 x 14): ""
+*it.PageRegion FanFoldGermanLegal/8,5 x 13: ""
+*it.PageRegion Letter/Letter (8,5 x 11): ""
+*it.PageRegion GovernmentLG/8,25 x 14: ""
+*it.PageRegion Folio/8,25 x 13: ""
+*it.PageRegion F/8 x 13: ""
+*it.PageRegion EngQuatro/8 x 10: ""
+*it.PageRegion Executive/Executive (7,25 x 10,5): ""
+*it.PageRegion Statement/5,5 x 8,5: ""
+*it.PageRegion Env10/Busta Com10 (4,125 x 9,5): ""
+*it.PageRegion EnvMonarch/Busta Monarch (3,875 x 7,5): ""
+*it.PageRegion EnvC5/Busta C5 (162 x 229 mm): ""
+*it.PageRegion EnvC6/Busta C6 (114 x 162 mm): ""
+*it.PageRegion DLEnv/Busta DL (110 x 220 mm): ""
+*it.PageRegion 8Kai/8K (267 x 390 mm): ""
+*it.PageRegion 16Kai/16K (195 x 267 mm): ""
+*it.PageRegion 11x15/11 x 15: ""
+*it.PageRegion 10x14/10 x 14: ""
+*it.PageRegion Oficio/8,5 x 13,4: ""
+*it.Translation Duplex/Fronte-retro: ""
+*it.Duplex None/Disattivo: ""
+*it.Duplex DuplexNoTumble/Margine lungo: ""
+*it.Duplex DuplexTumble/Margine corto: ""
+*it.Translation InputSlot/Origine carta: ""
+*it.InputSlot MultiTray/Vassoio bypass: ""
+*it.InputSlot 1Tray/Vassoio 1: ""
+*it.InputSlot 2Tray/Vassoio 2: ""
+*it.InputSlot 3Tray/Vassoio 3: ""
+*it.InputSlot Auto/Selezione automatica vassoio: ""
+*it.Translation Basic/Base: ""
+*it.Translation ColorModel/Modo colore: ""
+*it.ColorModel Color/Colore: ""
+*it.ColorModel Grayscale/Bianco e nero: ""
+*it.Translation InstallableOptions/Opzioni installabili: ""
+*it.Translation OptionTray/Vassoio opzionale: ""
+*it.OptionTray NotInstalled/Non installato: ""
+*it.OptionTray SingleTray/Vassoio 2: ""
+*it.OptionTray LowerPaperTrays/Vassoio 2 e 3: ""
+*it.Translation Paper/Carta: ""
+*it.Translation MediaType/Tipo carta: ""
+*it.MediaType Auto/Comune/Riciclata: ""
+*it.MediaType Thin/Sottile (52 - 59 g/m2): ""
+*it.MediaType Plain1/Comune 1 (60 - 74 g/m2): ""
+*it.MediaType Plain2/Comune 2 (75 - 81 g/m2): ""
+*it.MediaType Middlethick/Spessore medio (82 - 105g/m2): ""
+*it.MediaType Thick1/Spessa 1 (106 - 169 g/m2): ""
+*it.MediaType Thick2/Spessa 2 (170 - 220 g/m2): ""
+*it.MediaType Thick3/Spessa 3 (221 - 256 g/m2): ""
+*it.MediaType Thick4/Spessa 4 (257 - 300 g/m2): ""
+*it.MediaType Recycled/Riciclata: ""
+*it.MediaType Colored/Colore: ""
+*it.MediaType Special1/Speciale 1: ""
+*it.MediaType Special2/Speciale 2: ""
+*it.MediaType Special3/Speciale 3: ""
+*it.MediaType Letterhead/Carta intestata: ""
+*it.MediaType Preprinted/Prestampata: ""
+*it.MediaType Bond/Carta di alta qualità: ""
+*it.MediaType Cardstock/Cartoncino: ""
+*it.MediaType OHP/Lucidi: ""
+*it.MediaType Labels/Etichette: ""
+*it.MediaType Envelope/Busta: ""
+*it.MediaType MatCoated/Patinata (Opaca): ""
+*it.MediaType GlossCoated/Patinata (Lucida): ""
+*it.Translation PrintQuality/Qualità di stampa: ""
+*it.Translation Resolution/Risoluzione: ""
+*it.Resolution 600dpi/600 dpi: ""
+*it.Resolution 1200dpi/1200 dpi: ""
+*it.Translation RPSBitsPerDot/Gradazione: ""
+*it.RPSBitsPerDot 2BitsPerDot/Standard: ""
+*it.RPSBitsPerDot 1BitsPerDot/Veloce: ""
+*it.RPSBitsPerDot 4BitsPerDot/Fine: ""
+*it.Translation RIPrintMode/Economy Color: ""
+*it.RIPrintMode OFF/Disattivo: ""
+*it.RIPrintMode ON/Attivo: ""
+*it.Translation RPSColorRendDict/Profilo colore: ""
+*it.RPSColorRendDict Off/Disattivo: ""
+*it.RPSColorRendDict Photograph/Fotografica: ""
+*it.RPSColorRendDict Business/Presentazione: ""
+*it.RPSColorRendDict text/Testo: ""
+*it.RPSColorRendDict POP/Pubblicità per punto vendita: ""
+*it.RPSColorRendDict Red/Rosso personalizzato: ""
+*% Norwegian localization
+*no.Translation ModelName/RICOH M C2000: ""
+*no.Translation PageSize/Papirformat: ""
+*no.PageSize A3/A3 (297 x 420 mm): ""
+*no.PageSize A4/A4 (210 x 297 mm): ""
+*no.PageSize A5/A5 (148 x 210 mm): ""
+*no.PageSize A6/A6 (105 x 148 mm): ""
+*no.PageSize B4/B4 JIS (257 x 364 mm): ""
+*no.PageSize B5/B5 JIS (182 x 257 mm): ""
+*no.PageSize B6/B6 JIS (128 x 182 mm): ""
+*no.PageSize Tabloid/11 x 17: ""
+*no.PageSize Legal/Legal (8,5 x 14): ""
+*no.PageSize FanFoldGermanLegal/8,5 x 13: ""
+*no.PageSize Letter/Letter (8,5 x 11): ""
+*no.PageSize GovernmentLG/8,25 x 14: ""
+*no.PageSize Folio/8,25 x 13: ""
+*no.PageSize F/8 x 13: ""
+*no.PageSize EngQuatro/8 x 10: ""
+*no.PageSize Executive/Executive (7,25 x 10,5): ""
+*no.PageSize Statement/5,5 x 8,5: ""
+*no.PageSize Env10/Com10-konv. (4,125 x 9,5): ""
+*no.PageSize EnvMonarch/Monarch-konv. (3,875 x 7,5): ""
+*no.PageSize EnvC5/C5-konv. (162 x 229 mm): ""
+*no.PageSize EnvC6/C6-konv. (114 x 162 mm): ""
+*no.PageSize DLEnv/DL-konv. (110 x 220 mm): ""
+*no.PageSize 8Kai/8K (267 x 390 mm): ""
+*no.PageSize 16Kai/16K (195 x 267 mm): ""
+*no.PageSize 11x15/11 x 15: ""
+*no.PageSize 10x14/10 x 14: ""
+*no.PageSize Oficio/8,5 x 13,4: ""
+*no.Translation PageRegion/PageRegion: ""
+*no.PageRegion A3/A3 (297 x 420 mm): ""
+*no.PageRegion A4/A4 (210 x 297 mm): ""
+*no.PageRegion A5/A5 (148 x 210 mm): ""
+*no.PageRegion A6/A6 (105 x 148 mm): ""
+*no.PageRegion B4/B4 JIS (257 x 364 mm): ""
+*no.PageRegion B5/B5 JIS (182 x 257 mm): ""
+*no.PageRegion B6/B6 JIS (128 x 182 mm): ""
+*no.PageRegion Tabloid/11 x 17: ""
+*no.PageRegion Legal/Legal (8,5 x 14): ""
+*no.PageRegion FanFoldGermanLegal/8,5 x 13: ""
+*no.PageRegion Letter/Letter (8,5 x 11): ""
+*no.PageRegion GovernmentLG/8,25 x 14: ""
+*no.PageRegion Folio/8,25 x 13: ""
+*no.PageRegion F/8 x 13: ""
+*no.PageRegion EngQuatro/8 x 10: ""
+*no.PageRegion Executive/Executive (7,25 x 10,5): ""
+*no.PageRegion Statement/5,5 x 8,5: ""
+*no.PageRegion Env10/Com10-konv. (4,125 x 9,5): ""
+*no.PageRegion EnvMonarch/Monarch-konv. (3,875 x 7,5): ""
+*no.PageRegion EnvC5/C5-konv. (162 x 229 mm): ""
+*no.PageRegion EnvC6/C6-konv. (114 x 162 mm): ""
+*no.PageRegion DLEnv/DL-konv. (110 x 220 mm): ""
+*no.PageRegion 8Kai/8K (267 x 390 mm): ""
+*no.PageRegion 16Kai/16K (195 x 267 mm): ""
+*no.PageRegion 11x15/11 x 15: ""
+*no.PageRegion 10x14/10 x 14: ""
+*no.PageRegion Oficio/8,5 x 13,4: ""
+*no.Translation Duplex/Tosidig: ""
+*no.Duplex None/Av: ""
+*no.Duplex DuplexNoTumble/Langside: ""
+*no.Duplex DuplexTumble/Kortside: ""
+*no.Translation InputSlot/Papirkilde: ""
+*no.InputSlot MultiTray/Multiarkmater: ""
+*no.InputSlot 1Tray/Magasin 1: ""
+*no.InputSlot 2Tray/Magasin 2: ""
+*no.InputSlot 3Tray/Magasin 3: ""
+*no.InputSlot Auto/Automatisk magasinvalg: ""
+*no.Translation Basic/Grunnleggende: ""
+*no.Translation ColorModel/Fargemodus: ""
+*no.ColorModel Color/Farge: ""
+*no.ColorModel Grayscale/Svart-hvitt: ""
+*no.Translation InstallableOptions/Installerbare alternativer: ""
+*no.Translation OptionTray/Valgfritt magasin: ""
+*no.OptionTray NotInstalled/Ikke installert: ""
+*no.OptionTray SingleTray/Magasin 2: ""
+*no.OptionTray LowerPaperTrays/Magasin 2 og 3: ""
+*no.Translation Paper/Papir: ""
+*no.Translation MediaType/Papirtype: ""
+*no.MediaType Auto/Vanlig/resirkulert: ""
+*no.MediaType Thin/Tynt (52 – 59 g/m2): ""
+*no.MediaType Plain1/Vanlig 1 (60 - 74 g/m2): ""
+*no.MediaType Plain2/Vanlig 2 (75 - 81 g/m2): ""
+*no.MediaType Middlethick/Middels tykt (82 – 105 g/m2): ""
+*no.MediaType Thick1/Tykt 1 (106–169 g/m2): ""
+*no.MediaType Thick2/Tykt 2 (170–220 g/m2): ""
+*no.MediaType Thick3/Tykt 3 (221–256 g/m2): ""
+*no.MediaType Thick4/Tykt 4 (257–300 g/m2): ""
+*no.MediaType Recycled/Resirkulert: ""
+*no.MediaType Colored/Farge: ""
+*no.MediaType Special1/Spesielt 1: ""
+*no.MediaType Special2/Spesielt 2: ""
+*no.MediaType Special3/Spesielt 3: ""
+*no.MediaType Letterhead/Brevhode: ""
+*no.MediaType Preprinted/Fortrykt: ""
+*no.MediaType Bond/Skrivepapir: ""
+*no.MediaType Cardstock/Indekskort: ""
+*no.MediaType OHP/Transparent: ""
+*no.MediaType Labels/Etiketter: ""
+*no.MediaType Envelope/Konvolutt: ""
+*no.MediaType MatCoated/Bestrøket (matt): ""
+*no.MediaType GlossCoated/Bestrøket (glanset): ""
+*no.Translation PrintQuality/Utsk.kva.: ""
+*no.Translation Resolution/Oppløsning: ""
+*no.Resolution 600dpi/600 dpi: ""
+*no.Resolution 1200dpi/1200 dpi: ""
+*no.Translation RPSBitsPerDot/Gradering: ""
+*no.RPSBitsPerDot 2BitsPerDot/Standard: ""
+*no.RPSBitsPerDot 1BitsPerDot/Hurtig: ""
+*no.RPSBitsPerDot 4BitsPerDot/Fin: ""
+*no.Translation RIPrintMode/Economy Color: ""
+*no.RIPrintMode OFF/Av: ""
+*no.RIPrintMode ON/På: ""
+*no.Translation RPSColorRendDict/Fargeprofil: ""
+*no.RPSColorRendDict Off/Av: ""
+*no.RPSColorRendDict Photograph/Fotografisk: ""
+*no.RPSColorRendDict Business/Presentasjon: ""
+*no.RPSColorRendDict text/Tekst: ""
+*no.RPSColorRendDict POP/POP-visning: ""
+*no.RPSColorRendDict Red/Tilpasset rød: ""
+*% Russian localization
+*ru.Translation ModelName/RICOH M C2000: ""
+*ru.Translation PageSize/Размер бумаги: ""
+*ru.PageSize A3/A3 (297 x 420 мм): ""
+*ru.PageSize A4/A4 (210 x 297 мм): ""
+*ru.PageSize A5/A5 (148 x 210 мм): ""
+*ru.PageSize A6/A6 (105 x 148 мм): ""
+*ru.PageSize B4/B4 JIS (257 x 364 мм): ""
+*ru.PageSize B5/B5 JIS (182 x 257 мм): ""
+*ru.PageSize B6/B6 JIS (128 x 182 мм): ""
+*ru.PageSize Tabloid/11 x 17: ""
+*ru.PageSize Legal/Legal (8,5 x 14): ""
+*ru.PageSize FanFoldGermanLegal/8,5 x 13: ""
+*ru.PageSize Letter/Letter (8,5 x 11): ""
+*ru.PageSize GovernmentLG/8,25 x 14: ""
+*ru.PageSize Folio/8,25 x 13: ""
+*ru.PageSize F/8 x 13: ""
+*ru.PageSize EngQuatro/8 x 10: ""
+*ru.PageSize Executive/Executive (7,25 x 10.5): ""
+*ru.PageSize Statement/5,5 x 8,5: ""
+*ru.PageSize Env10/Com10 Env. (4,125 x 9,5): ""
+*ru.PageSize EnvMonarch/Monarch Env. (3,875 x 7,5): ""
+*ru.PageSize EnvC5/C5 Env. (162 x 229 мм): ""
+*ru.PageSize EnvC6/C6 Env. (114 x 162 мм): ""
+*ru.PageSize DLEnv/DL Env. (110 x 220 мм): ""
+*ru.PageSize 8Kai/8K (267 x 390 мм): ""
+*ru.PageSize 16Kai/16K (195 x 267 мм): ""
+*ru.PageSize 11x15/11 x 15: ""
+*ru.PageSize 10x14/10 x 14: ""
+*ru.PageSize Oficio/8,5 x 13,4: ""
+*ru.Translation PageRegion/PageRegion: ""
+*ru.PageRegion A3/A3 (297 x 420 мм): ""
+*ru.PageRegion A4/A4 (210 x 297 мм): ""
+*ru.PageRegion A5/A5 (148 x 210 мм): ""
+*ru.PageRegion A6/A6 (105 x 148 мм): ""
+*ru.PageRegion B4/B4 JIS (257 x 364 мм): ""
+*ru.PageRegion B5/B5 JIS (182 x 257 мм): ""
+*ru.PageRegion B6/B6 JIS (128 x 182 мм): ""
+*ru.PageRegion Tabloid/11 x 17: ""
+*ru.PageRegion Legal/Legal (8,5 x 14): ""
+*ru.PageRegion FanFoldGermanLegal/8,5 x 13: ""
+*ru.PageRegion Letter/Letter (8,5 x 11): ""
+*ru.PageRegion GovernmentLG/8,25 x 14: ""
+*ru.PageRegion Folio/8,25 x 13: ""
+*ru.PageRegion F/8 x 13: ""
+*ru.PageRegion EngQuatro/8 x 10: ""
+*ru.PageRegion Executive/Executive (7,25 x 10.5): ""
+*ru.PageRegion Statement/5,5 x 8,5: ""
+*ru.PageRegion Env10/Com10 Env. (4,125 x 9,5): ""
+*ru.PageRegion EnvMonarch/Monarch Env. (3,875 x 7,5): ""
+*ru.PageRegion EnvC5/C5 Env. (162 x 229 мм): ""
+*ru.PageRegion EnvC6/C6 Env. (114 x 162 мм): ""
+*ru.PageRegion DLEnv/DL Env. (110 x 220 мм): ""
+*ru.PageRegion 8Kai/8K (267 x 390 мм): ""
+*ru.PageRegion 16Kai/16K (195 x 267 мм): ""
+*ru.PageRegion 11x15/11 x 15: ""
+*ru.PageRegion 10x14/10 x 14: ""
+*ru.PageRegion Oficio/8,5 x 13,4: ""
+*ru.Translation Duplex/Дуплекс: ""
+*ru.Duplex None/Выкл.: ""
+*ru.Duplex DuplexNoTumble/Длинный край: ""
+*ru.Duplex DuplexTumble/Короткий край: ""
+*ru.Translation InputSlot/Источник бумаги: ""
+*ru.InputSlot MultiTray/Обходной лоток: ""
+*ru.InputSlot 1Tray/Лоток 1: ""
+*ru.InputSlot 2Tray/Лоток 2: ""
+*ru.InputSlot 3Tray/Лоток 3: ""
+*ru.InputSlot Auto/Автовыбор лотка: ""
+*ru.Translation Basic/Основной: ""
+*ru.Translation ColorModel/Цветовой режим: ""
+*ru.ColorModel Color/Цвет: ""
+*ru.ColorModel Grayscale/Черно-белый: ""
+*ru.Translation InstallableOptions/Опции инсталлировани: ""
+*ru.Translation OptionTray/Опциональный лоток: ""
+*ru.OptionTray NotInstalled/Не установлено: ""
+*ru.OptionTray SingleTray/Лоток 2: ""
+*ru.OptionTray LowerPaperTrays/Лоток 2 и 3: ""
+*ru.Translation Paper/Бумага: ""
+*ru.Translation MediaType/Тип бумаги: ""
+*ru.MediaType Auto/Обычная/Переработанная: ""
+*ru.MediaType Thin/Плотная (52 - 59 г/м2): ""
+*ru.MediaType Plain1/Обычная 1 (60 - 74 г/м2): ""
+*ru.MediaType Plain2/Обычная 2 (75 - 81 г/м2): ""
+*ru.MediaType Middlethick/Средн.плотности (82 - 105 г/м2): ""
+*ru.MediaType Thick1/Плотная 1 (106 - 169 г/м2): ""
+*ru.MediaType Thick2/Плотная 2 (170 - 220 г/м2): ""
+*ru.MediaType Thick3/Плотная 3 (221 - 256 г/м2): ""
+*ru.MediaType Thick4/Плотная 4 (257 - 300 г/м2): ""
+*ru.MediaType Recycled/Переработанная: ""
+*ru.MediaType Colored/Цвет: ""
+*ru.MediaType Special1/Специальная 1: ""
+*ru.MediaType Special2/Специальная 2: ""
+*ru.MediaType Special3/Специальная 3: ""
+*ru.MediaType Letterhead/Бланк: ""
+*ru.MediaType Preprinted/С печатью: ""
+*ru.MediaType Bond/Писчая: ""
+*ru.MediaType Cardstock/Карточки: ""
+*ru.MediaType OHP/Прозрачная пленка: ""
+*ru.MediaType Labels/Этикетки: ""
+*ru.MediaType Envelope/Конверт: ""
+*ru.MediaType MatCoated/С покрытием (Матовая): ""
+*ru.MediaType GlossCoated/С покрытием (Глянц.): ""
+*ru.Translation PrintQuality/Кач.печ.: ""
+*ru.Translation Resolution/Разрешение: ""
+*ru.Resolution 600dpi/600 т/д: ""
+*ru.Resolution 1200dpi/1200 т/д: ""
+*ru.Translation RPSBitsPerDot/Градация: ""
+*ru.RPSBitsPerDot 2BitsPerDot/Стандарт: ""
+*ru.RPSBitsPerDot 1BitsPerDot/Быстрая: ""
+*ru.RPSBitsPerDot 4BitsPerDot/Высокое: ""
+*ru.Translation RIPrintMode/Economy Color: ""
+*ru.RIPrintMode OFF/Выкл.: ""
+*ru.RIPrintMode ON/Вкл.: ""
+*ru.Translation RPSColorRendDict/Цветововй профиль: ""
+*ru.RPSColorRendDict Off/Выкл.: ""
+*ru.RPSColorRendDict Photograph/Фотографическое: ""
+*ru.RPSColorRendDict Business/Презентация: ""
+*ru.RPSColorRendDict text/Текст: ""
+*ru.RPSColorRendDict POP/POP-дисплей: ""
+*ru.RPSColorRendDict Red/Пользовательский красный: ""
+*% Simplified Chinese localization
+*zh_CN.Translation ModelName/RICOH M C2000: ""
+*zh_CN.Translation InstallableOptions/可安装的选购件: ""
+*zh_CN.Translation OptionTray/选购的纸盘: ""
+*zh_CN.OptionTray NotInstalled/未安装: ""
+*zh_CN.OptionTray SingleTray/纸盘2: ""
+*zh_CN.OptionTray LowerPaperTrays/纸盘2和3: ""
+*zh_CN.Translation PageSize/纸张尺寸: ""
+*zh_CN.PageSize A3/A3(297x420mm): ""
+*zh_CN.PageSize A4/A4(210x297mm): ""
+*zh_CN.PageSize A5/A5(148x210mm): ""
+*zh_CN.PageSize A6/A6(105x148mm): ""
+*zh_CN.PageSize B4/B4 JIS(257x364mm): ""
+*zh_CN.PageSize B5/B5 JIS(182x257mm): ""
+*zh_CN.PageSize B6/B6 JIS(128x182mm): ""
+*zh_CN.PageSize Tabloid/11x17: ""
+*zh_CN.PageSize Legal/法律用纸(8.5x14): ""
+*zh_CN.PageSize FanFoldGermanLegal/8.5x13: ""
+*zh_CN.PageSize Letter/信纸(8.5x11): ""
+*zh_CN.PageSize GovernmentLG/8.25x14: ""
+*zh_CN.PageSize Folio/8.25x13: ""
+*zh_CN.PageSize F/8x13: ""
+*zh_CN.PageSize EngQuatro/8x10: ""
+*zh_CN.PageSize Executive/行政纸(7.25x10.5): ""
+*zh_CN.PageSize Statement/5.5x8.5: ""
+*zh_CN.PageSize Env10/Com10信封(4.125x9.5): ""
+*zh_CN.PageSize EnvMonarch/Monarch信封(3.875x7.5): ""
+*zh_CN.PageSize EnvC5/C5信封(162x229mm): ""
+*zh_CN.PageSize EnvC6/C6信封(114x162mm): ""
+*zh_CN.PageSize DLEnv/DL信封(110x220mm): ""
+*zh_CN.PageSize 8Kai/8K(267x390mm): ""
+*zh_CN.PageSize 16Kai/16K(195x267mm): ""
+*zh_CN.PageSize 11x15/11x15: ""
+*zh_CN.PageSize 10x14/10x14: ""
+*zh_CN.PageSize Oficio/8.5x13.4: ""
+*zh_CN.Translation PageRegion/页面区域: ""
+*zh_CN.PageRegion A3/A3(297x420mm): ""
+*zh_CN.PageRegion A4/A4(210x297mm): ""
+*zh_CN.PageRegion A5/A5(148x210mm): ""
+*zh_CN.PageRegion A6/A6(105x148mm): ""
+*zh_CN.PageRegion B4/B4 JIS(257x364mm): ""
+*zh_CN.PageRegion B5/B5 JIS(182x257mm): ""
+*zh_CN.PageRegion B6/B6 JIS(128x182mm): ""
+*zh_CN.PageRegion Tabloid/11x17: ""
+*zh_CN.PageRegion Legal/法律用纸(8.5x14): ""
+*zh_CN.PageRegion FanFoldGermanLegal/8.5x13: ""
+*zh_CN.PageRegion Letter/信纸(8.5x11): ""
+*zh_CN.PageRegion GovernmentLG/8.25x14: ""
+*zh_CN.PageRegion Folio/8.25x13: ""
+*zh_CN.PageRegion F/8x13: ""
+*zh_CN.PageRegion EngQuatro/8x10: ""
+*zh_CN.PageRegion Executive/行政纸(7.25x10.5): ""
+*zh_CN.PageRegion Statement/5.5x8.5: ""
+*zh_CN.PageRegion Env10/Com10信封(4.125x9.5): ""
+*zh_CN.PageRegion EnvMonarch/Monarch信封(3.875x7.5): ""
+*zh_CN.PageRegion EnvC5/C5信封(162x229mm): ""
+*zh_CN.PageRegion EnvC6/C6信封(114x162mm): ""
+*zh_CN.PageRegion DLEnv/DL信封(110x220mm): ""
+*zh_CN.PageRegion 8Kai/8K(267x390mm): ""
+*zh_CN.PageRegion 16Kai/16K(195x267mm): ""
+*zh_CN.PageRegion 11x15/11x15: ""
+*zh_CN.PageRegion 10x14/10x14: ""
+*zh_CN.PageRegion Oficio/8.5x13.4: ""
+*zh_CN.Translation InputSlot/纸张来源: ""
+*zh_CN.InputSlot MultiTray/手送台: ""
+*zh_CN.InputSlot 1Tray/纸盘1: ""
+*zh_CN.InputSlot 2Tray/纸盘2: ""
+*zh_CN.InputSlot 3Tray/纸盘3: ""
+*zh_CN.InputSlot Auto/自动选择纸盘: ""
+*zh_CN.Translation Duplex/双面: ""
+*zh_CN.Duplex None/关: ""
+*zh_CN.Duplex DuplexNoTumble/长边: ""
+*zh_CN.Duplex DuplexTumble/短边: ""
+*zh_CN.Translation Basic/基本: ""
+*zh_CN.Translation ColorModel/色彩模式: ""
+*zh_CN.ColorModel Color/彩色: ""
+*zh_CN.ColorModel Grayscale/黑白: ""
+*zh_CN.Translation Paper/纸张: ""
+*zh_CN.Translation MediaType/纸张类型: ""
+*zh_CN.MediaType Auto/普通纸/再生纸: ""
+*zh_CN.MediaType Plain1/普通纸1(60 - 74 g/m2): ""
+*zh_CN.MediaType Plain2/普通纸2(75 - 81 g/m2): ""
+*zh_CN.MediaType Recycled/再生纸: ""
+*zh_CN.MediaType Special1/特殊纸1: ""
+*zh_CN.MediaType Special2/特殊纸2: ""
+*zh_CN.MediaType Special3/特殊纸3: ""
+*zh_CN.MediaType Colored/颜色纸: ""
+*zh_CN.MediaType Letterhead/印有信头的信纸: ""
+*zh_CN.MediaType Preprinted/印有图案的纸张: ""
+*zh_CN.MediaType Labels/标签: ""
+*zh_CN.MediaType Bond/胶膜纸: ""
+*zh_CN.MediaType Cardstock/卡片纸: ""
+*zh_CN.MediaType OHP/投影片: ""
+*zh_CN.MediaType Thick1/厚纸1(106 - 169 g/m2): ""
+*zh_CN.MediaType Thick2/厚纸2(170 - 220 g/m2): ""
+*zh_CN.MediaType Thick3/厚纸3(221 - 256 g/m2): ""
+*zh_CN.MediaType Thick4/厚纸4(257 - 300 g/m2): ""
+*zh_CN.MediaType Thin/薄纸(52 - 59 g/m2): ""
+*zh_CN.MediaType Middlethick/中等厚度纸(82 - 105 g/m2): ""
+*zh_CN.MediaType GlossCoated/铜版纸(光滑纸): ""
+*zh_CN.MediaType MatCoated/铜版纸(无光泽): ""
+*zh_CN.MediaType Envelope/信封: ""
+*zh_CN.Translation PrintQuality/打印质量: ""
+*zh_CN.Translation Resolution/分辨率: ""
+*zh_CN.Resolution 600dpi/600 dpi: ""
+*zh_CN.Resolution 1200dpi/1200 dpi: ""
+*zh_CN.Translation RPSBitsPerDot/等级: ""
+*zh_CN.RPSBitsPerDot 2BitsPerDot/标准: ""
+*zh_CN.RPSBitsPerDot 1BitsPerDot/快速: ""
+*zh_CN.RPSBitsPerDot 4BitsPerDot/精细: ""
+*zh_CN.Translation RIPrintMode/Economy Color: ""
+*zh_CN.RIPrintMode OFF/关: ""
+*zh_CN.RIPrintMode ON/开: ""
+*zh_CN.Translation RPSColorRendDict/色彩配置文件: ""
+*zh_CN.RPSColorRendDict Off/关: ""
+*zh_CN.RPSColorRendDict Photograph/照片: ""
+*zh_CN.RPSColorRendDict Business/演示: ""
+*zh_CN.RPSColorRendDict text/文本: ""
+*zh_CN.RPSColorRendDict POP/POP广告: ""
+*zh_CN.RPSColorRendDict Red/自定义红色: ""
+*% Spanish localization
+*es.Translation ModelName/RICOH M C2000: ""
+*es.Translation PageSize/Tamaño de papel: ""
+*es.PageSize A3/A3 (297 x 420 mm): ""
+*es.PageSize A4/A4 (210 x 297 mm): ""
+*es.PageSize A5/A5 (148 x 210 mm): ""
+*es.PageSize A6/A6 (105 x 148 mm): ""
+*es.PageSize B4/B4 JIS (257 x 364 mm): ""
+*es.PageSize B5/B5 JIS (182 x 257 mm): ""
+*es.PageSize B6/B6 JIS (128 x 182 mm): ""
+*es.PageSize Tabloid/11 x 17: ""
+*es.PageSize Legal/Legal (8,5 x 14): ""
+*es.PageSize FanFoldGermanLegal/8,5 x 13: ""
+*es.PageSize Letter/Letter (8,5 x 11): ""
+*es.PageSize GovernmentLG/8,25 x 14: ""
+*es.PageSize Folio/8,25 x 13: ""
+*es.PageSize F/8 x 13: ""
+*es.PageSize EngQuatro/8 x 10: ""
+*es.PageSize Executive/Executive (7,25 x 10,5): ""
+*es.PageSize Statement/5,5 x 8,5: ""
+*es.PageSize Env10/Sobre Com10 (4,125 x 9,5): ""
+*es.PageSize EnvMonarch/Sobre Monarch (3,875 x 7,5): ""
+*es.PageSize EnvC5/Sobre C5 (162 x 229 mm): ""
+*es.PageSize EnvC6/Sobre C6 (114 x 162 mm): ""
+*es.PageSize DLEnv/Sobre DL (110 x 220 mm): ""
+*es.PageSize 8Kai/8K (267 x 390 mm): ""
+*es.PageSize 16Kai/16K (195 x 267 mm): ""
+*es.PageSize 11x15/11 x 15: ""
+*es.PageSize 10x14/10 x 14: ""
+*es.PageSize Oficio/8,5 x 13,4: ""
+*es.Translation PageRegion/PageRegion: ""
+*es.PageRegion A3/A3 (297 x 420 mm): ""
+*es.PageRegion A4/A4 (210 x 297 mm): ""
+*es.PageRegion A5/A5 (148 x 210 mm): ""
+*es.PageRegion A6/A6 (105 x 148 mm): ""
+*es.PageRegion B4/B4 JIS (257 x 364 mm): ""
+*es.PageRegion B5/B5 JIS (182 x 257 mm): ""
+*es.PageRegion B6/B6 JIS (128 x 182 mm): ""
+*es.PageRegion Tabloid/11 x 17: ""
+*es.PageRegion Legal/Legal (8,5 x 14): ""
+*es.PageRegion FanFoldGermanLegal/8,5 x 13: ""
+*es.PageRegion Letter/Letter (8,5 x 11): ""
+*es.PageRegion GovernmentLG/8,25 x 14: ""
+*es.PageRegion Folio/8,25 x 13: ""
+*es.PageRegion F/8 x 13: ""
+*es.PageRegion EngQuatro/8 x 10: ""
+*es.PageRegion Executive/Executive (7,25 x 10,5): ""
+*es.PageRegion Statement/5,5 x 8,5: ""
+*es.PageRegion Env10/Sobre Com10 (4,125 x 9,5): ""
+*es.PageRegion EnvMonarch/Sobre Monarch (3,875 x 7,5): ""
+*es.PageRegion EnvC5/Sobre C5 (162 x 229 mm): ""
+*es.PageRegion EnvC6/Sobre C6 (114 x 162 mm): ""
+*es.PageRegion DLEnv/Sobre DL (110 x 220 mm): ""
+*es.PageRegion 8Kai/8K (267 x 390 mm): ""
+*es.PageRegion 16Kai/16K (195 x 267 mm): ""
+*es.PageRegion 11x15/11 x 15: ""
+*es.PageRegion 10x14/10 x 14: ""
+*es.PageRegion Oficio/8,5 x 13,4: ""
+*es.Translation Duplex/Dúplex: ""
+*es.Duplex None/Desactivado: ""
+*es.Duplex DuplexNoTumble/A lo ancho: ""
+*es.Duplex DuplexTumble/A lo largo: ""
+*es.Translation InputSlot/Entrada de papel: ""
+*es.InputSlot MultiTray/Bandeja bypass: ""
+*es.InputSlot 1Tray/Bandeja 1: ""
+*es.InputSlot 2Tray/Bandeja 2: ""
+*es.InputSlot 3Tray/Bandeja 3: ""
+*es.InputSlot Auto/Selección auto bandeja: ""
+*es.Translation Basic/Básico: ""
+*es.Translation ColorModel/Modo de color: ""
+*es.ColorModel Color/Color: ""
+*es.ColorModel Grayscale/Blanco y negro: ""
+*es.Translation InstallableOptions/Opciones instalables: ""
+*es.Translation OptionTray/Bandeja opcional: ""
+*es.OptionTray NotInstalled/No instalada: ""
+*es.OptionTray SingleTray/Bandeja 2: ""
+*es.OptionTray LowerPaperTrays/Bandejas 2 y 3: ""
+*es.Translation Paper/Papel: ""
+*es.Translation MediaType/Tipo de papel: ""
+*es.MediaType Auto/Normal/Reciclado: ""
+*es.MediaType Thin/Fino (52 - 59 g/m2): ""
+*es.MediaType Plain1/Normal 1 (60 - 74 g/m2): ""
+*es.MediaType Plain2/Normal 2 (75 - 81 g/m2): ""
+*es.MediaType Middlethick/Grueso medio (82 - 105 g/m2): ""
+*es.MediaType Thick1/Grueso 1 (106 - 169 g/m2): ""
+*es.MediaType Thick2/Grueso 2 (170 - 220 g/m2): ""
+*es.MediaType Thick3/Grueso 3 (221 - 256 g/m2): ""
+*es.MediaType Thick4/Grueso 4 (257 - 300 g/m2): ""
+*es.MediaType Recycled/Reciclado: ""
+*es.MediaType Colored/Color: ""
+*es.MediaType Special1/Especial 1: ""
+*es.MediaType Special2/Especial 2: ""
+*es.MediaType Special3/Especial 3: ""
+*es.MediaType Letterhead/Membrete: ""
+*es.MediaType Preprinted/Preimpreso: ""
+*es.MediaType Bond/Papel de carta: ""
+*es.MediaType Cardstock/Tarjetas: ""
+*es.MediaType OHP/Transparencia: ""
+*es.MediaType Labels/Etiquetas: ""
+*es.MediaType Envelope/Sobre: ""
+*es.MediaType MatCoated/Satinado (Mate): ""
+*es.MediaType GlossCoated/Satinado (Brillo): ""
+*es.Translation PrintQuality/Calidad de impresión: ""
+*es.Translation Resolution/Resolución: ""
+*es.Resolution 600dpi/600 dpi: ""
+*es.Resolution 1200dpi/1200 dpi: ""
+*es.Translation RPSBitsPerDot/Gradación: ""
+*es.RPSBitsPerDot 2BitsPerDot/Estándar: ""
+*es.RPSBitsPerDot 1BitsPerDot/Rápido: ""
+*es.RPSBitsPerDot 4BitsPerDot/Fino: ""
+*es.Translation RIPrintMode/Economy Color: ""
+*es.RIPrintMode OFF/Desactivado: ""
+*es.RIPrintMode ON/Activado: ""
+*es.Translation RPSColorRendDict/Perfil del color: ""
+*es.RPSColorRendDict Off/Desactivado: ""
+*es.RPSColorRendDict Photograph/Fotográfico: ""
+*es.RPSColorRendDict Business/Presentación: ""
+*es.RPSColorRendDict text/Texto: ""
+*es.RPSColorRendDict POP/Pantalla POP: ""
+*es.RPSColorRendDict Red/Rojo personalizado: ""
+*% Turkish localization
+*tr.Translation ModelName/RICOH M C2000: ""
+*tr.Translation PageSize/Kağıt Boyutu: ""
+*tr.PageSize A3/A3 (297 x 420 mm): ""
+*tr.PageSize A4/A4 (210 x 297 mm): ""
+*tr.PageSize A5/A5 (148 x 210 mm): ""
+*tr.PageSize A6/A6 (105 x 148 mm): ""
+*tr.PageSize B4/B4 JIS (257 x 364 mm): ""
+*tr.PageSize B5/B5 JIS (182 x 257 mm): ""
+*tr.PageSize B6/B6 JIS (128 x 182 mm): ""
+*tr.PageSize Tabloid/11 x 17: ""
+*tr.PageSize Legal/Legal (8,5 x 14): ""
+*tr.PageSize FanFoldGermanLegal/8,5 x 13: ""
+*tr.PageSize Letter/Letter (8,5 x 11): ""
+*tr.PageSize GovernmentLG/8,25 x 14: ""
+*tr.PageSize Folio/8,25 x 13: ""
+*tr.PageSize F/8 x 13: ""
+*tr.PageSize EngQuatro/8 x 10: ""
+*tr.PageSize Executive/Executive (7,25 x 10,5): ""
+*tr.PageSize Statement/5,5 x 8,5: ""
+*tr.PageSize Env10/Com10 Zrf. (4,125 x 9,5): ""
+*tr.PageSize EnvMonarch/Monarch Zrf. (3,875 x 7,5): ""
+*tr.PageSize EnvC5/C5 Zrf. (162 x 229 mm): ""
+*tr.PageSize EnvC6/C6 Zrf. (114 x 162 mm): ""
+*tr.PageSize DLEnv/DL Zrf. (110 x 220 mm): ""
+*tr.PageSize 8Kai/8K (267 x 390 mm): ""
+*tr.PageSize 16Kai/16K (195 x 267 mm): ""
+*tr.PageSize 11x15/11 x 15: ""
+*tr.PageSize 10x14/10 x 14: ""
+*tr.PageSize Oficio/8,5 x 13,4: ""
+*tr.Translation PageRegion/PageRegion: ""
+*tr.PageRegion A3/A3 (297 x 420 mm): ""
+*tr.PageRegion A4/A4 (210 x 297 mm): ""
+*tr.PageRegion A5/A5 (148 x 210 mm): ""
+*tr.PageRegion A6/A6 (105 x 148 mm): ""
+*tr.PageRegion B4/B4 JIS (257 x 364 mm): ""
+*tr.PageRegion B5/B5 JIS (182 x 257 mm): ""
+*tr.PageRegion B6/B6 JIS (128 x 182 mm): ""
+*tr.PageRegion Tabloid/11 x 17: ""
+*tr.PageRegion Legal/Legal (8,5 x 14): ""
+*tr.PageRegion FanFoldGermanLegal/8,5 x 13: ""
+*tr.PageRegion Letter/Letter (8,5 x 11): ""
+*tr.PageRegion GovernmentLG/8,25 x 14: ""
+*tr.PageRegion Folio/8,25 x 13: ""
+*tr.PageRegion F/8 x 13: ""
+*tr.PageRegion EngQuatro/8 x 10: ""
+*tr.PageRegion Executive/Executive (7,25 x 10,5): ""
+*tr.PageRegion Statement/5,5 x 8,5: ""
+*tr.PageRegion Env10/Com10 Zrf. (4,125 x 9,5): ""
+*tr.PageRegion EnvMonarch/Monarch Zrf. (3,875 x 7,5): ""
+*tr.PageRegion EnvC5/C5 Zrf. (162 x 229 mm): ""
+*tr.PageRegion EnvC6/C6 Zrf. (114 x 162 mm): ""
+*tr.PageRegion DLEnv/DL Zrf. (110 x 220 mm): ""
+*tr.PageRegion 8Kai/8K (267 x 390 mm): ""
+*tr.PageRegion 16Kai/16K (195 x 267 mm): ""
+*tr.PageRegion 11x15/11 x 15: ""
+*tr.PageRegion 10x14/10 x 14: ""
+*tr.PageRegion Oficio/8,5 x 13,4: ""
+*tr.Translation Duplex/Dubleks: ""
+*tr.Duplex None/Kapalı: ""
+*tr.Duplex DuplexNoTumble/Uzun Kenar: ""
+*tr.Duplex DuplexTumble/Kısa Kenar: ""
+*tr.Translation InputSlot/Kağıt Kaynağı: ""
+*tr.InputSlot MultiTray/Bypass Tepsisi: ""
+*tr.InputSlot 1Tray/Kaset 1: ""
+*tr.InputSlot 2Tray/Kaset 2: ""
+*tr.InputSlot 3Tray/Kaset 3: ""
+*tr.InputSlot Auto/Oto Kaset Seçimi: ""
+*tr.Translation Basic/Temel: ""
+*tr.Translation ColorModel/Renk Modu: ""
+*tr.ColorModel Color/Renkli: ""
+*tr.ColorModel Grayscale/Siyah-Beyaz: ""
+*tr.Translation InstallableOptions/Kurulabilir Seçenekler: ""
+*tr.Translation OptionTray/Kaset Seçeneği: ""
+*tr.OptionTray NotInstalled/Kurulu Değil: ""
+*tr.OptionTray SingleTray/Kaset 2: ""
+*tr.OptionTray LowerPaperTrays/Kaset 2 ve 3: ""
+*tr.Translation Paper/Kağıt: ""
+*tr.Translation MediaType/Kağıt Tipi: ""
+*tr.MediaType Auto/Düz/Geri Dönüşümlü: ""
+*tr.MediaType Thin/İnce (52 - 59 g/m2): ""
+*tr.MediaType Plain1/Düz 1 (60 - 74 g/m2): ""
+*tr.MediaType Plain2/Düz 2 (75 - 81 g/m2): ""
+*tr.MediaType Middlethick/Orta Kalın (82 - 105 g/m2): ""
+*tr.MediaType Thick1/Kalın 1 (106 - 169 g/m2): ""
+*tr.MediaType Thick2/Kalın 2 (170 - 220 g/m2): ""
+*tr.MediaType Thick3/Kalın 3 (221 - 256 g/m2): ""
+*tr.MediaType Thick4/Kalın 4 (257 - 300 g/m2): ""
+*tr.MediaType Recycled/Geri Dönüşümlü: ""
+*tr.MediaType Colored/Renkli: ""
+*tr.MediaType Special1/Özel 1: ""
+*tr.MediaType Special2/Özel 2: ""
+*tr.MediaType Special3/Özel 3: ""
+*tr.MediaType Letterhead/Antetli: ""
+*tr.MediaType Preprinted/Baskılı: ""
+*tr.MediaType Bond/Bond: ""
+*tr.MediaType Cardstock/Karton: ""
+*tr.MediaType OHP/Saydamlık: ""
+*tr.MediaType Labels/Etiketler: ""
+*tr.MediaType Envelope/Zarf: ""
+*tr.MediaType MatCoated/Kaplı (Mat): ""
+*tr.MediaType GlossCoated/Kaplı (Parlak): ""
+*tr.Translation PrintQuality/Yazdırma Kalitesi: ""
+*tr.Translation Resolution/Çözünürlük: ""
+*tr.Resolution 600dpi/600 dpi: ""
+*tr.Resolution 1200dpi/1200 dpi: ""
+*tr.Translation RPSBitsPerDot/Geçiş: ""
+*tr.RPSBitsPerDot 2BitsPerDot/Standart: ""
+*tr.RPSBitsPerDot 1BitsPerDot/Hızlı: ""
+*tr.RPSBitsPerDot 4BitsPerDot/Hassas: ""
+*tr.Translation RIPrintMode/Economy Color: ""
+*tr.RIPrintMode OFF/Kapalı: ""
+*tr.RIPrintMode ON/Açık: ""
+*tr.Translation RPSColorRendDict/Renk Profili: ""
+*tr.RPSColorRendDict Off/Kapalı: ""
+*tr.RPSColorRendDict Photograph/Fotoğrafik: ""
+*tr.RPSColorRendDict Business/Sunum: ""
+*tr.RPSColorRendDict text/Yazı: ""
+*tr.RPSColorRendDict POP/Satış Noktası Ekranı: ""
+*tr.RPSColorRendDict Red/Özel Kırmızı: ""

@@ -1,0 +1,108 @@
+Source: foomatic-db
+Maintainer: Debian Printing Group <debian-printing@lists.debian.org>
+Uploaders:
+ Till Kamppeter <till.kamppeter@gmail.com>,
+Section: text
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 12),
+ foomatic-db-engine,
+ pyppd,
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/printing-team/foomatic-db
+Vcs-Git: https://salsa.debian.org/printing-team/foomatic-db.git
+Homepage: https://www.openprinting.org/
+
+Package: foomatic-db
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Recommends:
+ cups,
+ cups-client,
+ cups-filters | foomatic-filters,
+ foomatic-db-engine,
+ ghostscript,
+ printer-driver-all,
+Suggests:
+ cups-filters,
+ hplip,
+ hplip-cups,
+ openprinting-ppds,
+Description: OpenPrinting printer support - database
+ Foomatic is a printing system designed to make it easier to set up
+ common printers for use with Debian (and other operating systems).
+ It provides the "glue" between a print spooler (like CUPS or lpr) and
+ your actual printer, by telling your computer how to process files
+ sent to the printer.
+ .
+ This package contains the printer database distributed by
+ OpenPrinting for most common drivers.  You will probably need
+ the foomatic-db-engine package for this package to be useful.
+
+Package: foomatic-db-compressed-ppds
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Recommends:
+ cups,
+ cups-client,
+ cups-filters | foomatic-filters,
+ ghostscript,
+Suggests:
+ cups-filters,
+ hplip,
+ hplip-cups,
+ openprinting-ppds,
+ printer-driver-all,
+Breaks:
+ foomatic-db,
+Conflicts:
+ foomatic-db,
+ foomatic-db-hpijs,
+Provides:
+ foomatic-db,
+Replaces:
+ foomatic-db,
+ foomatic-db-hpijs,
+Description: OpenPrinting printer support - Compressed PPDs derived from the database
+ Foomatic is a printing system designed to make it easier to set up
+ common printers for use with Debian (and other operating systems).
+ It provides the "glue" between a print spooler (like CUPS or lpr) and
+ your actual printer, by telling your computer how to process files
+ sent to the printer.
+ .
+ This package contains all PPD files which can be generated from the Foomatic
+ database as one small compressed archive. This reduces the disk space
+ consumption compared to the Foomatic XML database vastly and in addition
+ makes listing of all available PPDs and extracting the needed PPD much faster
+ than using the Foomatic XML database.
+
+Package: openprinting-ppds
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Recommends:
+ cups,
+ cups-client,
+ cups-filters | foomatic-filters,
+Suggests:
+ hpijs-ppds,
+Description: OpenPrinting printer support - PostScript PPD files
+ This package includes a collection of free PostScript Printer Description
+ files for PostScript (and clone) printers from various manufacturers, as
+ distributed by OpenPrinting.
+ .
+ If you have non-PostScript printers, the foomatic-db-compressed-ppds (or
+ foomatic-db and foomatic-db-engine), hplip and the
+ printer-driver-* packages are the ones you need; this package
+ won't be of much help to you.
+ .
+ Some manufacturers distribute PPD files for their printers under
+ non-free licenses; those are not included in this package, but may be
+ available from the manufacturer's website, included on a CD or
+ other media with the printer, or downloadable from the OpenPrinting
+ web site (even automatically if the printer setup tool supports it).

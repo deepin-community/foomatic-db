@@ -1,0 +1,63 @@
+#!/usr/bin/make -f
+
+derives_from_ubuntu := $(shell (dpkg-vendor --derives-from Ubuntu && echo "yes") || echo "no")
+
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+else
+# Faster when testing on modern desktops, 1 task takes less than a full CPU
+NUMJOBS = 4
+endif
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-drivers=NOOBSOLETES,NOEMPTYCMDLINE
+
+override_dh_install:
+	# Some files have the executable bit set.
+	- find debian/tmp/ -executable -type f -print0 | xargs -0 chmod -x
+
+	# Remove non-PPD files from PPD repositories, CUPS 1.4 reports errors
+	# on these files.
+	- find $(CURDIR)/debian/tmp/usr/share/foomatic/db/source/PPD -type f \! -name '*.ppd.gz' -print0 | xargs -0 rm
+
+	# Remove entries for drivers never shipped in Debian nor in Ubuntu
+	( cd $(CURDIR)/debian/tmp/usr/share/foomatic/db/source/driver; \
+	    rm ppmtomd.xml; \
+	    rm lpstyl.xml; \
+	    rm pbm2lwxl.xml; \
+	    rm bjc800j.xml; \
+	    rm pbm2l7k.xml; \
+	    rm lm1100.xml; \
+	    rm pbm2l2030.xml; \
+	    rm c2070.xml; \
+	    rm drv_x125.xml; \
+	    rm pentaxpj.xml; \
+	    rm ml85p.xml; \
+	)
+
+	# Fix common errors in PPDs that make CUPS choke (OpenPrinting
+	# bug #164, Debian bug #493104)
+	for f in `find $(CURDIR)/debian/tmp/usr/share/foomatic/db/source/PPD -name '*.ppd.gz'`; do gzip -cd $$f | perl -p -e 's/^\*CloseUI(\s+)/*CloseUI:\1/' | perl -p -e 's/\*1284DeviceId/*1284DeviceID/' | gzip --best>  $$f.tmp; rm $$f; mv $$f.tmp $$f; done
+
+	dh_install
+	dh_missing --list-missing
+
+	mkdir -p $(CURDIR)/debian/foomatic-db-compressed-ppds/usr/share/ppd/
+	# Pre-build PPD files for foomatic-db-compressed-ppds
+	FOOMATICDB=$(CURDIR)/debian/foomatic-db/usr/share/foomatic foomatic-compiledb -j $(NUMJOBS) -t ppd -d $(CURDIR)/debian/foomatic-db-compressed-ppds/usr/share/ppd/foomatic-ppd `ls -1 $(CURDIR)/debian/foomatic-db/usr/share/foomatic/db/source/driver/*.xml | perl -p -e 's:^.*db/source/driver/(\S*)\.xml\s*$$:\1\n:'`
+
+	dh_pyppd -popenprinting-ppds
+	dh_pyppd -pfoomatic-db-compressed-ppds
+
+	# Install the ppd-updater files
+	for package in foomatic-db foomatic-db-compressed-ppds openprinting-ppds; do \
+		install -D -m 644 debian/$$package.ppd-updater $(CURDIR)/debian/$$package/usr/share/cups/ppd-updaters/$$package; \
+	done
+
+	# Install the apport hook on Ubuntu and derivatives
+ifeq ($(derives_from_ubuntu),yes)
+	install -D -m 644 debian/ubuntu/apport-hook.py $(CURDIR)/debian/foomatic-db-compressed-ppds/usr/share/apport/package-hooks/source_foomatic-db.py
+endif

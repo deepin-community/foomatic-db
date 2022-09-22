@@ -1,0 +1,1906 @@
+foomatic-db (20210824-1) unstable; urgency=medium
+
+  * New upstream version 20210824
+  * Update watch file format version to 4
+  * Run wrap-and-sort -baskt
+  * S-V: Update to 4.6.0 without changes needed
+  * Remove myself from Uploaders
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 02 Sep 2021 15:06:48 +0200
+
+foomatic-db (20200820-1) unstable; urgency=medium
+
+  * New upstream version 20200820
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 25 Aug 2020 20:45:25 +0200
+
+foomatic-db (20200527-1) unstable; urgency=medium
+
+  * New upstream version 20200527
+  * Set some upstream metadata fields
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 10 Jul 2020 18:53:57 +0200
+
+foomatic-db (20200427-1) unstable; urgency=medium
+
+  * New upstream version 20200427
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 02 May 2020 10:59:17 +0200
+
+foomatic-db (20200401-1) unstable; urgency=medium
+
+  * New upstream version 20200401
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 03 Apr 2020 16:17:37 +0200
+
+foomatic-db (20200219-1) unstable; urgency=medium
+
+  * New upstream version 20200219
+  * Cleanup d/control: bump S-V without other changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 09 Mar 2020 21:42:10 +0100
+
+foomatic-db (20191126-1) unstable; urgency=medium
+
+  * New upstream version 20191126
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 24 Dec 2019 14:24:09 +0100
+
+foomatic-db (20191125-1) unstable; urgency=medium
+
+  * New upstream version 20191125
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 26 Nov 2019 08:49:42 +0100
+
+foomatic-db (20190913-1) unstable; urgency=medium
+
+  * New upstream version 20190913
+  * Fix day-of-week for one changelog entry
+  * Refresh debian/gitlab-ci.yml config
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 13 Sep 2019 17:42:10 +0200
+
+foomatic-db (20190820-1) unstable; urgency=medium
+
+  * New upstream version 20190820
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 21 Aug 2019 22:39:57 +0200
+
+foomatic-db (20181217-2) unstable; urgency=medium
+
+  * Finish debhelper 12 compat bump; fixes FTBFS
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 07 Jan 2019 20:19:33 +0100
+
+foomatic-db (20181217-1) unstable; urgency=medium
+
+  * New upstream version 20181217
+  * Bump debhelper compat to 12
+  * Refresh copyright for the new Canon PPDs
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 07 Jan 2019 18:26:10 +0100
+
+foomatic-db (20180921-2) unstable; urgency=medium
+
+  * Refresh d/control thanks to `cme`
+  * Mark openprinting-ppds and foomatic-db-compressed-ppds M-A: foreign
+  * Fix d/fill.copyright.blanks.yml syntax for cme
+  * Refresh d/copyright with `cme`
+  * Bump dh compat to 11
+  * Trim trailing whitespace.
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 17 Dec 2018 07:51:24 +0100
+
+foomatic-db (20180921-1) unstable; urgency=medium
+
+  * New upstream version 20180921
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 02 Nov 2018 13:28:53 +0100
+
+foomatic-db (20180917-1) unstable; urgency=medium
+
+  * New upstream version 20180917
+    - Added new Lexmark PostScript printers.
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 17 Sep 2018 09:56:17 +0200
+
+foomatic-db (20180604-1) unstable; urgency=medium
+
+  * New upstream version 20180604
+  * Bump S-V to 4.1.4 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 05 Jun 2018 09:57:40 +0200
+
+foomatic-db (20180306-1) unstable; urgency=medium
+
+  * New upstream version
+  * Mark foomatic-db M-A: foreign
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 30 Mar 2018 10:28:09 +0200
+
+foomatic-db (20180210-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump Standards-Version to 4.1.3 without changes needed
+  * Update Vcs-* fields for the move to salsa.d.o
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 10 Feb 2018 14:40:37 +0100
+
+foomatic-db (20171012-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump Standards-Version to 4.1.1 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 12 Oct 2017 17:57:16 +0200
+
+foomatic-db (20170723-1) unstable; urgency=medium
+
+  * New upstream version
+  * Cleanup leftover from get-orig-source target
+  * Bump Standards-Version to 4.0.0 without changes needed
+  * Migrate to debhelper compat 10
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 23 Jul 2017 10:56:39 +0200
+
+foomatic-db (20161201-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 16 Dec 2016 14:48:05 +0100
+
+foomatic-db (20161005-1) unstable; urgency=medium
+
+  * New upstream version
+    - Added Brother HL-2240 and HL-2240D printers
+    - Updated data related to the "foo2zjs" printer driver project to the
+      current state
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 05 Oct 2016 09:59:11 +0200
+
+foomatic-db (20160830-1) unstable; urgency=medium
+
+  * New upstream release
+    - Added -dNOMEDIAATTRS command line option to all Ghostscript command
+      lines, as we do not need Ghostscript's facility to check and correct
+      media settings with Ghostscript's (the driver's ?) internal lists.
+      cups-filters does this job already (and better, at least better
+      controllable) using the PPD files.
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 01 Sep 2016 08:25:29 +0200
+
+foomatic-db (20160705-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 05 Jul 2016 20:13:06 +0200
+
+foomatic-db (20160603-1) unstable; urgency=medium
+
+  * New upstream release
+
+  * Bump S-V to 3.9.8 without changes needed
+  * Bump debhelper compat to 9, bump version requirement in B-D
+  * Use the https/cgit URL in VCS-Browser
+  * Use the https alternative in debian/watch
+  * Convert debian/copyright to CF-1.0 with the help of 'cme update
+    dpkg-copyright' and its helper files
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 12 Jun 2016 14:40:38 +0200
+
+foomatic-db (20160315-1) unstable; urgency=medium
+
+  * New upstream release
+
+  [ Till Kamppeter ]
+  * Switched watch file to *.xz source tarballs as they now get auto-generated
+    on the upstream server
+
+  [ Didier Raboud ]
+  * Drop get-orig-source machinery previously used to xz-repack the orig source
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 15 Mar 2016 20:27:14 +0100
+
+foomatic-db (20160212-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 3.9.7 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 15 Feb 2016 18:18:29 +0100
+
+foomatic-db (20150825-1) unstable; urgency=medium
+
+  * New upstream release
+    - Lexmark Optra E/E+: Use ljet4 instead of HPIJS as recommended driver,
+      this improves the grayscale quality on these printers (LP: #978506).
+    - Support for new printers from Sharp.
+    - Support for new printers from Ricoh and OEM, Epson, and Samsung.
+    - Fixes on the PPDs from Ricoh and OEM.
+
+  [ Didier Raboud ]
+  * Use gbp.conf, and amend debian/rules' get-orig-source to cope with git→gbp
+    renaming
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 25 Aug 2015 17:07:43 +0200
+
+foomatic-db (20150411-1) unstable; urgency=medium
+
+  * New upstream release
+    - Samsung printers: added Job Accounting and Confidential Print features
+      support, added M453x model
+    - Added PPD and XML files for 15 new printers from Ricoh, OEM and Samsung
+    - Removed wrongly uploaded PPD file for one Ricoh and one NRG printers
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 11 Apr 2015 17:28:24 +0200
+
+foomatic-db (20141016-1) unstable; urgency=medium
+
+  * New upstream release
+    - Added Samsung M2835 and M2885 models
+    - Added 1 Lexmark PPD file, updated and added few XML Files.
+    - Replace Lexmark MX910 series faulty ppd file.
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 16 Oct 2014 10:20:52 +0200
+
+foomatic-db (20140730-1) unstable; urgency=medium
+
+  * New upstream release
+    - Support for 41 new printers
+    - Added Brother HL-2135 (LP: #1180996)
+    - Added Brother HL-2142 (LP: #1337743)
+    - The Lexmark E230 has only 600 dpi maximum resolution, removed the
+      1200-dpi entries (LP: #1335561)
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 30 Jul 2014 22:07:26 +0200
+
+foomatic-db (20140325-1) unstable; urgency=medium
+
+  * New upstream release
+    - Support for 29 new printers from Ricoh and OEM.
+    - Support for 4 new printers from Samsung.
+    - Fixed device IDs for many Samsung printers.
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 25 Mar 2014 11:32:48 +0100
+
+foomatic-db (20140218-1) unstable; urgency=medium
+
+  * New upstream release
+    - Removed 4 broken printer entries from Ricoh and OEM.
+    - Corrections on 11 Samsung PPDs.
+
+  * Move the repository from collab-maint to printing; update the VCS-*
+    fields accordingly
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 05 Mar 2014 17:30:39 +0100
+
+foomatic-db (20140106-1) unstable; urgency=low
+
+  * New upstream release
+    - 30 new Lexmark printers
+    - New Fuji Xerox DocuPrint CM305 printer.
+  * Bump Standards-Version to 3.9.5 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 06 Jan 2014 13:24:53 +0100
+
+foomatic-db (20131129-2) unstable; urgency=low
+
+  [ Colin Watson ]
+  * Add cups-filters (>= 1.0.42) as first alternative recommendation to
+    foomatic-filters. (Closes: #731716)
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 10 Dec 2013 14:57:01 +0100
+
+foomatic-db (20131129-1) unstable; urgency=low
+
+  * New upstream release
+    - 52 new printers
+    - Strings correction in some Samsung printers
+  * Drop cjet suggestion, printer-driver-cjet will come through
+    printer-driver-all
+  * Replace ghostscript-cups Suggests with cups-filters
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 29 Nov 2013 12:11:42 +0100
+
+foomatic-db (20130912-1) unstable; urgency=low
+
+  * New upstream release
+    - Added 55 new printer models from Ricoh and OEM.
+  * Rebuild against pyppd >= 1.0.1
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 12 Sep 2013 20:38:36 +0200
+
+foomatic-db (20130609-1) unstable; urgency=low
+
+  * New 20130609 upstream release.
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 09 Jun 2013 21:34:14 +0200
+
+foomatic-db (20130517-1) unstable; urgency=low
+
+  * New 20130517 upstream release.
+  * Bump Standards-Version to 3.9.4 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 17 May 2013 15:44:56 +0200
+
+foomatic-db (20130313-1) experimental; urgency=low
+
+  * New 20130313 upstream release.
+     - Added manufacturer-supplied PPD files for Samsung PostScript printers.
+  * Make the get-orig-source facilitator work in more cases.
+  * Remove all patches incorporated upstream.
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 13 Mar 2013 21:27:00 +0100
+
+foomatic-db (20130301-1) experimental; urgency=low
+
+  * New upstream release.
+
+  * Drop openprinting-ppds-extra transitional package and relationships.
+  * Drop foomatic-db-engine Breaks. foomatic-db doesn't work with
+    -compressed-ppds, but they can be installed together.
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 01 Mar 2013 23:54:06 +0100
+
+foomatic-db (20121226-1) experimental; urgency=low
+
+  * New upstream release.
+
+  * In foomatic-db-compressed-ppds, move foomatic-db-engine from
+    Recommends to Breaks. (Closes: #627770)
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 06 Jan 2013 13:32:26 +0100
+
+foomatic-db (20121015-1) experimental; urgency=low
+
+  * New upstream release.
+    - Update 36 Gestetner, Infotec, Lanier, NRG, Ricoh and Savin
+      printers.
+
+  * Drop hpijs recommends in favour of the transitive recommends through
+    printer-driver-all (Closes: #690512).
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 15 Oct 2012 22:26:02 +0200
+
+foomatic-db (20120829-1) experimental; urgency=low
+
+  * New upstream release.
+    - Added 18 new printer models from Infotec, Savin, Ricoh, Lanier,
+      Gestetner and ALPS.
+    - Samsung-ML-1450.xml: Added IEEE 1284 Device ID.
+
+  * Implement original tarball recompression using xz as get-orig-source
+    debian/rules target.
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 29 Aug 2012 10:58:21 +0200
+
+foomatic-db (20120823-0ubuntu4) quantal-proposed; urgency=low
+
+  * debian/patches/fix-invalid-character-in-oce-varioprint-2100ps-ppd.patch:
+    Fixed PPD file with invalid characters (LP: #1014852).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue,  9 Oct 2012 20:18:03 +0200
+
+foomatic-db (20120823-0ubuntu3) quantal-proposed; urgency=low
+
+  * foomatic-db-compressed-ppds: Suggest printer-driver-all here, not
+    in foomatic-db.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 25 Sep 2012 15:46:04 +0200
+
+foomatic-db (20120823-0ubuntu2) quantal-proposed; urgency=low
+
+  * Suggest printer-driver-all (universe) instead of recommending it.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 23 Sep 2012 16:49:06 +0200
+
+foomatic-db (20120823-0ubuntu1) quantal; urgency=low
+
+  * New upstream release.
+    - Added more than 60 new printer models from Ricoh and OEM.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 23 Aug 2012 11:28:03 +0200
+
+foomatic-db (20120523-1) unstable; urgency=low
+
+  * New upstream release.
+    - Added Epson LP M5300.
+    - Added Ricoh Aficio MP C3502
+    - Removed relationships with "pxlmono" and "lj5gray" to Brother HL
+      5250DN as they do not perform well with it.
+
+  * Recompressed the original tarball using `xz -6e`.
+  * Drop obsolete Replaces/Breaks/Conflicts against disappeared
+    packages.
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 24 May 2012 10:52:22 +0200
+
+foomatic-db (20120322-1) unstable; urgency=low
+
+  * New upstream release.
+     - Added Xerox Phaser 3160N. This printer does not work with SpliX but
+       works as a PCL-XL printer with the "pxlcolor" driver (LP: #945294)
+     - Added new printers from Ricoh and OEM.
+     - Fixed driver names for Epson, Ricoh, Infotec, Gestetner, Lanier, NRG,
+       and Savin printers.
+
+  * Bump Standards-Version to 3.9.3 without changes needed.
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 26 Mar 2012 09:42:02 +0200
+
+foomatic-db (20120212-1) unstable; urgency=low
+
+  * New upstream release.
+    - Added entries for new Epson, Ricoh, Infotec, Gestetner, Lanier, NRG, and
+      Savin printers
+    - Added "Resolution" option to "ibmpro" driver. Without specifying the
+      resolution the driver does not work (Closes: #554769).
+    - Assigned driver "ljetplus" instead of "ljet3" to the Panasonic
+      KX-P4450, as only "ljetplus" actually works (Closes: #350319).
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 12 Feb 2012 16:09:39 +0100
+
+foomatic-db (20111206-1) unstable; urgency=low
+
+  * New upstream release
+    - Added the KONICA MINOLTA versions of several Minolta laser printers to
+      make them correctly auto-detected for everyone (LP: #889811).
+    - Make sure all Xerox Phaser 6180 printers have correct declaration of
+      mechanisms, in particular of color capabilities (Closes: #642960).
+    - Assigned also PCL-5e drivers to the Samsung ML-2570 and recommended the
+      PCL-5e driver "hpijs-pcl5e" as (at least some copies of) the printer has
+      problems with the PostScript and PCL-XL drivers (LP: #855412).
+    - Use the special PageSize option for dot-matrix printers for the Canon
+      BJ-330, as it has a paper handling like a dot-matrix printer
+      (LP: #854983).
+
+  * All patches have been merged upstream (see above); drop them.
+  * Replace explicit relationships on drivers by a recommendation on
+    printer-driver-all to foomatic-db*.
+  * Update description to match the new printer-driver-* naming.
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 06 Dec 2011 23:24:14 +0100
+
+foomatic-db (20110831-1) unstable; urgency=low
+
+  * New upstream release
+     - The Lexmark E120n does not work in PostScript mode when using
+       generic PostScript PPD files. Updated comment and removed support
+       by "Postscript" driver. Rated down to "Mostly" (LP: #802285).
+     - Removed "Halftoning Algorithm" option, it does not work any more
+       with current Ghostscript (LP: #659398).
+     - Updated entry for the Lexmark E230: Added Device ID, support by
+       PCL-5e drivers (LP: #821818).
+     - Added the Brother HL-2070N (LP: #778620).
+
+  [ Till Kamppeter ]
+  * Add canon-bj-330-dot-matrix-page-sizes.patch:
+    Use the special PageSize option for dot-matrix printers for the Canon
+    BJ-330, as it has a paper handling like a dot-matrix printer
+    (LP: #854983).
+  * Add samsung-ml-2570-recommend-hpijs-pcl5e.patch:
+    Assigned also PCL-5e drivers to the Samsung ML-2570 and recommended the
+    PCL-5e driver "hpijs-pcl5e" as (at least some copies of) the printer has
+    problems with the PostScript and PCL-XL drivers (LP: #855412).
+
+  [ Didier Raboud ]
+  * Add Xerox-Phaser_6180_addcolor.patch:
+    Make sure all Xerox Phaser 6180 printers have correct declaration of
+    mechanisms, in particular of color capabilities (Closes: #642960).
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 26 Sep 2011 14:45:10 +0200
+
+foomatic-db (20110803-3) unstable; urgency=low
+
+  [ Till Kamppeter ]
+  * debian/rules: Make sure that NUMJOBS is always defined. Otherwise the
+    command line of foomatic-compiledb gets messed up. Also use more standard
+    directory names for the collection of pre-built PPDs.
+  * debian/foomatic-db-compressed-ppds.ppd-updater,
+    debian/openprinting-ppds.ppd-updater: Content of the two files was the
+    wrong way around. Corrected.
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 20 Aug 2011 02:03:01 +0200
+
+foomatic-db (20110803-2) unstable; urgency=low
+
+  * Replace the PPD-updater postinsts by CUPS' triggers.
+    - Breaks against too old cups versions.
+    - Add ppd-updater files, to trigger with parameters.
+  * Use the new dh_pyppd.
+    - Version Build-Depends to pyppd.
+    - Install PPDs to the packages before the dh_pyppd calls.
+    - Replace explicit Depends by ${misc:Depends}.
+  * Drop the now-unnecessary tweak for better PPDs compression.
+  * Install pre-processed PPDs directly in the foomatic-db-compressed-ppds
+    directory.
+    - This spares one big move of too many files.
+  * Compile the PPDs with no more jobs than specified in DEB_BUILD_OPTIONS,
+    per policy.
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 19 Aug 2011 15:07:00 +0200
+
+foomatic-db (20110803-1) unstable; urgency=low
+
+  * New upstream release
+     - Added 8 new Epson inkjet printers, 6 new Lexmark printers, and
+       5 new printers from Ricoh and OEM, entries and PPD files
+       supplied by the printer's manufacturers.
+     - Added the Epson LX-300+ and the Dell 3000cn based on user reports
+       (LP: #776326).
+     - Added "-dNOINTERPOLATE" to the Ghostscript command lines, as this makes
+       Ghostscript significantly faster (LP: #668800, Ghostscript bug #691755).
+     - Renamed the choice names of the manufacturer-independent "InputSlot"
+       options to not use tray numbers any more as the tray numbering varies
+       with the manufacturer (Closes: #530600).
+     - Fixes in the XML schema files which describe the format of the Foomatic
+       XML files.
+     - Install the XML schema files, to be used by the new foomatic-verify-xml
+       utility in foomatic-db-engine.
+     - Several fixes in the Foomatic XML files, many discovered during the
+       development work on foomatic-db-engine in the Google Summer of Code.
+
+  [ Till Kamppeter ]
+  * debian/foomatic-db.install: Include XML schema files in the foomatic-db
+    package.
+  * debian/rules: Moved apport hook into the foomatic-db-compressed-ppds
+    package as this package is usually installed.
+
+  [ Didier Raboud ]
+  * Merge from Ubuntu:
+    - Drop foomatic-db-xml leftovers.
+    - Document and clean the dependencies around -db-xml.
+  * Uploaders update:
+    - Drop Chris Lawrence, with his consent and great thanks for the 6 years
+      of work on foomatic-db.
+    + Add Till Kamppeter.
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 03 Aug 2011 21:29:22 +0200
+
+foomatic-db (20110617-1) unstable; urgency=low
+
+  * New upstream release
+    - Renamed choices of the manufacturer-independent "InputSlot" options so
+      that they do not use tray numbers any more. The tray numbering varies
+      from manufacturer to manufacturer (Closes: #530600).
+  * Add c2esp as suggestion to foomatic-db-* as it went out of NEW.
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 17 Jun 2011 16:19:38 +0200
+
+foomatic-db (20110520-1) unstable; urgency=low
+
+  * New upstream release
+    - Added Brother HL-2040 (LP: #768727).
+    - Added the new "rastertosag-gdi" driver and the printers which use it:
+      Ricoh Aficio SP 1000S and SP 1100S (LP: #700141).
+    - Added custom page size to the PageSize option of many drivers. Most
+      printers are capable of taking arbitrary page sizes and in addition, we
+      cannot be sure that we have enumerated all possible page sizes for all
+      printers (LP: #726397).
+    - Added new "c2esp" driver entry for Kodak inkjet printers and some Kodak
+      inkjets which possibly work with this driver.
+    - Added 88 new Postscript and 76 new PCL-XL PPD files for Ricoh Family
+      Group.
+    - Updated 629 existing PCL-XL PPD files to add new paper size support.
+  * Bump Standards-Version to 3.9.2.0 without changes needed.
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 20 May 2011 14:40:25 +0200
+
+foomatic-db (20110317-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+     - Added custom page size to the most-used PageSize option entries, so
+       that most Foomatic-generated PPD files get the possibility to select
+       a custom page size. We do this as we do not know the complete sets of
+       possible page sizes for most printers and probably many actually allow
+       custom page sizes by hardware (LP: #726397).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 17 Mar 2011 17:47:03 +0100
+
+foomatic-db (20110218-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+     - Added support for new printers from Lexmark and Epson.
+     - Corrected some Epson printer entries.
+     - Corrected all PPD files from Ricoh and OEM: Renamed 11x17 to Tabloid
+       and HalfLetter to Statement, adapted naming scheme of installable
+       options to CUPS, hardware collate for PCL-XL mode.
+     - Corrected graphics and photo quality rating in the PCL-XL driver
+       entries for Ricoh and OEM printers.
+     - Added/corrected lots of device IDs for HP printers.
+     - Removed unneeded executable bits from PPD files (Upstream bug #606).
+     - General clean-up of the build system (Upstream bugs #609, #610, #611).
+     - Fixed typos in README file (Upstream bug #608).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 18 Feb 2011 17:23:03 +0100
+
+foomatic-db (20110209-1) unstable; urgency=low
+
+  * New 20110209 upstream release, to unstable.
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 09 Feb 2011 17:08:55 +0100
+
+foomatic-db (20110127-1) experimental; urgency=low
+
+  * New 20110127 upstream release
+
+  * Merge back from Ubuntu natty:
+    [ Till Kamppeter ]
+    - Merged openprinting-ppds and openprinting-ppds-extra.
+    - Introduced new binary package foomatic-db-compressed-ppds, a 600K
+      compressed archive of all Foomatic-generated PPDs, replacing 18M of
+      Foomatic XML data.
+    - Suggest also printer drivers which are in Ubuntu Universe, let
+      foomatic-db-compressed-ppds require CUPS, as the compressed archive is
+      not of much use without CUPS.
+    [ Didier Raboud ]
+    - Use the external pyppd.
+
+  [ Didier Raboud ]
+  * Add line-breaks to fields in debian/control for better change-
+    following.
+  * debian/rules: Don't fail on non-applicable fixes.
+  * Update package relationships.
+  * Get rid of pre-stable versioned conflicts against hp-ppd.
+  * Document the transitional "Provides"
+  * Make -compressed-ppds provide foomatic-db too.
+  * Document foomatic-filters.
+  * Add misc:Depends to -extra.
+  * Add python Depends to packages containing pyppd archives.
+  * Bump Standards to 3.9.1 without changes needed.
+  * Use my @d.o address.
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 27 Jan 2011 23:13:30 +0100
+
+foomatic-db (20101217-0ubuntu2) natty; urgency=low
+
+  * debian/control: Versioned conflict of openprinting-ppds-extra with
+    openprinting-ppds. Otherwise openprinting-ppds-extra is not installable.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 11 Jan 2010 10:12:03 +0100
+
+foomatic-db (20101217-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+     - Added new PostScript printers and PPDs from Epson and Brother.
+     - Added database entries for the PPDs of Epson's Japanese market
+       printers.
+     - Corrected the translation lines of Lexmark's PostScript PPDs to
+       comply with the specs.
+     - Renamed printers from Epson and Sharp so that their names match
+       the names in the manufacturer-supplied PPD files.
+     - Forced the "eplaser" and "eplaser-jp" drivers to feed Ghostscript
+       only with PostScript input as these drivers have problems with PDF.
+     - Added documentation for job parameter entities in Foomatic PPD files
+       to the README file.
+     - Fixed default PageSize choice of "necp2xX.upp" driver.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 17 Dec 2010 14:22:03 +0100
+
+foomatic-db (20100915-0ubuntu4) maverick; urgency=low
+
+  * debian/local/pyppd/pyppd/ppd.py: Fixed PPD file list generated by the
+    compressed PPD file archive for the PostScript PPDs. The artificial
+    device IDs generated for PPDs without *1284DeviceID: entry lead to wrong
+    assumptions when system-config-printer selects the driver for a detected
+    printer (LP: #653814).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue,  5 Oct 2010 11:48:03 +0200
+
+foomatic-db (20100915-0ubuntu3) maverick; urgency=low
+
+  * debian/local/pyppd/pyppd/: Updated to pyppd 0.4.9, to suppress runtime
+    error tracebacks by putting a "try: ... except ...: pass" construct around
+    the main function call. This avoids Apport pop-ups when the execution of the
+    self-extracting compressed PPD file archives gets stopped by the calling
+    process (LP: #618017).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 22 Sep 2010 12:25:03 +0200
+
+foomatic-db (20100915-0ubuntu2) maverick; urgency=low
+
+  * debian/local/pyppd/pyppd/ppd.py, debian/local/pyppd/pyppd/pyppd-ppdfile.in:
+    Let the compressed PPD archives not contain duplicate PPD URIs, even if the
+    lines reference the same PPD. Most printer setup tools cannot cope with
+    duplicate PPD URIs.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 15 Sep 2010 21:58:03 +0200
+
+foomatic-db (20100915-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+     - Update of all Ricoh and OEM PPD files by Ricoh, to introduce CMD:
+       fields in the PPD's device IDs so that printer setup tools can select
+       the PPDs by page description language (PCL or PostScript).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 15 Sep 2010 13:30:03 +0200
+
+foomatic-db (20100910-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+     - Renamed the printers Toshiba GL-1010 and GL-1020 so that their
+       names match the names in the manufacturer-supplied PPD files.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 10 Sep 2010 17:00:03 +0200
+
+foomatic-db (20100906-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+     - Added Brother MFC-7840N/W printers (LP: #560518).
+     - Added PCL driver support for all Sharp printers which were listed as
+       only working via PostScript. For these printers PostScript is also
+       an optional add-on and therefore one should be able to also set them
+       up in PCL mode. The PCL mode will also be the recommended driver
+       to assure that automatic setup of the printer works also if it has
+       no PostScript module (LP: #378475).
+  * debian/patches/hl-2170w-pcl5e.patch: Removed patch with upstream fixes.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon,  6 Sep 2010 20:15:03 +0200
+
+foomatic-db (20100806-0ubuntu7) maverick; urgency=low
+
+  * debian/patches/hl-2170w-pcl5e.patch: Changed drivers for the Brother
+    HL-2170W, the printer works only in the PCL-5e mode, not with PCL-XL
+    (LP: #570027).
+  * debian/control, debian/rules, debian/foomatic-db-compressed-ppds.postinst:
+    Introduced the binary package foomatic-db-compressed-ppds. This package
+    contains all PPDs which can be generated from the Foomatic XML database
+    in one compressed pyppd archive. This takes much less disk space than the
+    XML database (600 kB vs. 18 MB) and access (listing all PPDs, extracting
+    the needed PPD) is also significantly faster.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 30 Aug 2010 18:15:03 +0200
+
+foomatic-db (20100806-0ubuntu6) maverick; urgency=low
+
+  * debian/control, debian/rules, debian/openprinting-ppds-extra.install,
+    debian/openprinting-ppds-extra.postinst, debian/openprinting-ppds.install:
+    Merged the binary packages openprinting-ppds and openprinting-ppds-extra.
+    The splitting was formerly introduced to save space on the Ubuntu Desktop
+    CD. The new PPD compression saves much more space and allows to put the
+    PPDs from openprinting-ppds-extra back onto the CD. So now the splitting
+    does nothing more than making maintenance of this package more complicated.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 12 Aug 2010 09:13:03 +0200
+
+foomatic-db (20100806-0ubuntu5) maverick; urgency=low
+
+  * debian/control: Added build and runtime dependencies for the PPD archiving
+    and extracting.
+  * debian/rules: Let build process error out if PPD archiving errors out.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 11 Aug 2010 09:57:03 +0200
+
+foomatic-db (20100806-0ubuntu4) maverick; urgency=low
+
+  * debian/local/pyppd/pyppd/ppd.py: The PPD compressor did not parse the
+    PPD correctly and confused ShortNickName and NickName, ending up with
+    the PPD listing showing the ShortNickName entries and therefore being
+    incompatible with the old uncompressed PPDs.
+  * debian/foomatic-db.links, debian/foomatic-db.dirs: Removed, the directory
+    /usr/share/ppd/openprinting and the link to
+    /usr/share/foomatic/db/source/PPD are not needed any more as there are no
+    physical PPD files in the package.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 11 Aug 2010 00:32:03 +0200
+
+foomatic-db (20100806-0ubuntu3) maverick; urgency=low
+
+  * debian/local/pyppd/, debian/rules, debian/control: Compressed all physical
+    PPD files of the openprinting-ppds and openprinting-ppds-extra packages
+    into archive files reducing the disk space occupation by a factor of 10,
+    freeing several tens of megabytes on the Ubuntu Desktop CDs (or on any live
+    CD based on Debian or a derivative distribution). The archives are self-
+    extracting and located in /usr/lib/cups/driver/, so that CUPS automatically
+    extracts the PPD files. Thank you very much to Vitor Baptista who developed
+    this great PPD compressor in the Google Summer of Code 2010.
+  * debian/openprinting-ppds.postinst, debian/openprinting-ppds-extra.postinst:
+    Updated auto updater for the PPDs of the already existing print queues to
+    work with the new PPD archives.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue, 10 Aug 2010 21:31:03 +0200
+
+foomatic-db (20100806-0ubuntu2) maverick; urgency=low
+
+  * debian/openprinting-ppds.install, debian/openprinting-ppds-extra.install:
+    Corrected paths: PPDs should be in /usr/share/ppd/openprinting/, not
+    in /usr/share/ppd/postscript/. Once, these PPDs come from OpenPrinting and
+    there could be packages with PostScript PPDs from other sources, and
+    second, some of the PPDs provided by the openprinting-ppds-extra package
+    are PCL-XL PPDs.
+  * debian/dirs: Letting a package create the empty directory /usr/share does
+    not make sense, as every package has files in /usr/share/doc. Removed.
+  * debian/foomatic-db.dirs: Let the foomatic-db package create the directory
+    /usr/share/ppd/openprinting, as foomatic-db provides a link to it.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri,  6 Aug 2010 19:46:03 +0200
+
+foomatic-db (20100806-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+     - Correction in ChangeLog
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri,  6 Aug 2010 17:15:03 +0200
+
+foomatic-db (20100804-1) unstable; urgency=low
+
+  [ Didier Raboud ]
+  * New upstream release
+    - New Oki Data Corp B410 (LP: #603894)
+    - Lexmark E120 uses PostScript (LP: #548747)
+
+  * Putting under Debian Printing Group umbrella.
+
+ -- Didier Raboud <didier@raboud.com>  Wed, 04 Aug 2010 22:32:26 +0200
+
+foomatic-db (20100630-1) unstable; urgency=low
+
+  * New upstream release
+    (Closes: #580351)
+
+  * Merge from Ubuntu:
+    - postinst's: PPD auto updaters:
+      "If the package is updated, it is checked whether existing
+       queues use PPDs of this package and if yes, the PPDs get
+       updated." (Till)
+      Closes: #370335, #437309
+    - Split openprinting-ppds into {,-extra}
+    - Link the PPD files in the foomatic database
+    - Rewrite some descriptions, shorten others.
+    - Merge most of the package relationships.
+    - Install the apport hook on Ubuntu
+    - Remove non-PPD files from the repository, Closes: #546784
+    - Remove entries for non-existing drivers.
+    - Fix common errors in PPDs that make CUPS choke, Closes: #493104
+
+  * Add myself to Uploaders as I'll help Chris in maintaining foomatic-db.
+  * Convert to 3.0 (quilt) source format.
+  * Convert to tiny dh7 style.
+  * Add misc:Depends.
+  * debian/watch: update.
+  * Add Vcs-* fields with new packaging repository.
+  * Compress PPDs with gzip --best
+  * Merge Till's changelog entries.
+  * Update README.Debian.
+  * Bump Standards to 3.9.0.0 - Rework some Conflicts/Replaces/Breaks.
+
+ -- Didier Raboud <didier@raboud.com>  Wed, 30 Jun 2010 14:18:57 +0200
+
+foomatic-db (20100216-0ubuntu3) lucid; urgency=low
+
+  * debian/patches/halftoning-algorithm.patch: Fixed command line code fields
+    which got truncated by hosting the OpenPrinting database in a MySQL
+    database on the server (LP: #541690).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 26 Mar 2010 13:05:03 +0100
+
+foomatic-db (20100216-0ubuntu2) lucid; urgency=low
+
+  * debian/patches/fix-margins-in-inches.patch: Fixed margin definitions in
+    several Foomatic XML files. The unit setting got lost when the margins
+    were given in inches (LP: #529279).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 10 Mar 2010 13:20:03 +0100
+
+foomatic-db (20100216-0ubuntu1) lucid; urgency=low
+
+  * New upstream release
+     - Removed ugly Perl workarounds to implement paper input tray selection
+       for the PCL 4/5/5e/5c/6/XL Ghostscript drivers. Paper tray selection is
+       fixed in GhostScript for some time already.
+     - Removed explicit supply of PJL commands for setting the resolution
+       with the PCL 6/XL Ghostscript drivers. This is fixed in Ghostscript
+       for some time.
+     - Set the resolution of the draft model of the PCL 6/XL Ghostscript drivers
+       to 600 dpi, some printers, like the HP LaserJet 3390, do not print
+       correctly with 300 dpi in PCL-XL mode.
+     - Removed workaround against crashes of the "bjc600" and "bjc800" drivers
+       when PDF is used as input. This is also fixed in Ghostscript for some
+       time.
+     - Fixed PIN option of the "hl7x0" driver, it had no long name (menu
+       entry string) for the "None" setting.
+     - Added the Brother PT-2300 label printer.
+  * debian/patches/bjc600-bjc800.patch: Removed, applied upstream.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue, 16 Feb 2010 20:25:03 +0100
+
+foomatic-db (20100215-0ubuntu1) lucid; urgency=low
+
+  * New upstream release
+     - New printer models supported: Kyocera CS-C2525E, CS-C3225E, CS-C3232E,
+       CS-C4035E, CS 250ci, CS 300ci, CS 400ci, CS 500ci, FS-C5100DN,
+       FS-C5200DN, FS-C5300DN, FS-C5350DN, FS-C5400DN, FS-C8100DN+, KM-C2525E,
+       KM-C3225E, KM-C3232E, KM-C4035E, TASKalfa 250ci, 300ci, 400ci,
+       HP LaserJet 1022n, 1022nw, P4014, P4015, P2055dn,
+       Lexmark C540, C543, C544, C546, C734, C736, C780, C782, C930, C935,
+       E260, E260d, E260dn, E360d, E360dn, E460dn, E460dw, E462dtn, EG460dn,
+       T650, T652, T654, T656, TG654, W850, X203n, X204n, X264dn, X363dn,
+       X364dn, X364dw, X463de, X464de, X466de, X466dte, X466dwe, X543, X544,
+       X546, X651de, X652de, X654de, X656de, X658de, X734de, X736de, X738de,
+       X860de, X862de, X864de, X940e, X945e
+     - Canon LBP-3360 needs "hpijs-pcl5e" instead of "pxlmono" as driver
+       (LP: #504841).
+     - Added "n" and "nw" version of HP LaserJet 1022, to make printer setup
+       tools set them up with "foo2zjs" (LP: #250872).
+     - Samsung CLP-610ND needs "splix" instead of "pxlcolor" as driver
+       (LP: #505423, LP: #510832).
+     - Added license info to the PostScript PPDs from KONICA MINOLTA.
+     - Lexmark's PostScript PPDs are free software and therefore included in
+       the foomatic-db upstream source package now.
+     - Generic PCL 6/PCL XL printer works also with the "hpijs-pcl5c" driver.
+     - Oki B6300 works as PCL-XL printer.
+     - Corrected OrderDependency numbers for the JCL options so that the JCL
+       code is definitely inserted in the correct order (LP: #442451).
+     - Removed "*cupsFilter" line for Apple from the ready-made PPDs, it causes
+       problems with some printers on Mac OS X.
+     - Renamed printer entries: HP Color LaserJet 8550GN -> 8550, HP LaserJet
+       2055 -> P2055d.
+     - Removed HP's PostScript PPD files as they are supplied and maintained
+       in HPLIP.
+     - Major XML clean-up.
+     - Updated and completed the documentation of the Foomatic XML format in
+       the README file.
+  * debian/patches/remove-redundant-hp-ppds.patch,
+    debian/patches/kyocera-ppd-jcl-fix.patch: Removed, applied upstream.
+  * debian/patches/bjc600-bjc800.patch: Regenerated.
+  * debian/control: Added "Provides: foomatic-db-hpijs" (LP: #491287).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 15 Feb 2010 18:37:31 +0100
+
+foomatic-db (20090825-0ubuntu4) karmic; urgency=low
+
+  * debian/patches/kyocera-ppd-jcl-fix.patch: Corrected OrderDependency
+    numbers for the JCL options so that the JCL code is definitely inserted
+    in the correct order (LP: #442451).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 09 Oct 2009 00:53:23 +0200
+
+foomatic-db (20090825-0ubuntu3) karmic; urgency=low
+
+  * debian/foomatic-db.postinst, debian/openprinting-ppds.postinst,
+    debian/openprinting-ppds-extra.postinst: Fixed "lpstat -r" check for the
+    auto update of PPDs of existing queues. "lpstat -r" exits always with
+    status 0, we must check the actual output. Call lpstat, lpadmin, and
+    cupsctl with "-h /var/run/cups/cups.sock" to avoid querying remote
+    servers set up in /etc/cups/client.conf, and asking for passwords.
+    Thanks to Martin-Éric Racine for tracking this down and the solution!
+    See Debian bug #543468. Use signal names instead of numbers for trap.
+    Quiesces a lintian bashism warning.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 18 Sep 2009 12:54:23 +0200
+
+foomatic-db (20090825-0ubuntu2) karmic; urgency=low
+
+  * debian/patches/remove-redundant-hp-ppds.patch: Remove redundant PPDs for
+    HP's PostScript printers. These PPDs are already included in HPLIP and
+    only the versions in HPLIP are maintained upstream.
+  * debian/control: Added "Suggests: hplip" to foomatic-db as the hplip package
+    contains the PPD files for HP's PostScript printers.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed,  2 Sep 2009 11:07:23 +0200
+
+foomatic-db (20090825-0ubuntu1) karmic; urgency=low
+
+  * New upstream release
+     - Added entries for non-PostScript versions of the Sharp printers
+       (LP: #253905).
+  * debian/rules: Remove documentation files from PPD repositories.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue, 25 Aug 2009 20:35:23 +0200
+
+foomatic-db (20090819-0ubuntu4) karmic; urgency=low
+
+  * debian/control: Changed maintainer e-mail address from
+    ubuntu-devel@lists.ubuntu.com to ubuntu-devel-discuss@lists.ubuntu.com.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 20 Aug 2009 16:44:57 +0200
+
+foomatic-db (20090819-0ubuntu3) karmic; urgency=low
+
+  * debian/control: Moved cjet from Recommends: to Suggests: as it is only in
+    Universe.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 20 Aug 2009 15:46:57 +0200
+
+foomatic-db (20090819-0ubuntu2) karmic; urgency=low
+
+  * debian/control: foometic-db now has a Depends: on Ghostscript, as all
+    drivers for which foomatic-db provides PPDs need Ghostscript, Recommends:
+    on all drivers which are needed so that all PPDs generated by foomatic-db
+    work, and Suggests: on all printer driver packages in general. Removed
+    unneeded Suggests: entries for cups from the PPD packages, as they depend
+    on cups.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 20 Aug 2009 11:46:57 +0200
+
+foomatic-db (20090819-0ubuntu1) karmic; urgency=low
+
+  * New upstream release
+     - Updated Kyocera PPDs to version 8.4 (Upstream bug #366) and added 5
+       new Kyocera printers.
+     - Fixed default paper tray for the HP CM8050/CM8060 MFP to be tray 2 and
+       not the bypass tray 1 (LP: #99316).
+     - Added Brother HL-2140 and DCP-7070 (LP: #287889 and LP: #153295).
+     - Removed some obsolete and redundant tags from the XML data.
+     - Changed the recommended driver for the Epson Stylus Color 200 to
+       "stcolor".The "mj500c" driver is buggy on Ghostscript 8.60 and newer
+       (Red Hat bug #513676, Ghostscript bug #689595). Marked "mj500c"
+       obsolete with "stcolor" as recommended replacement.
+     - Added 8 printers from Texas Instruments.
+     - Added the Genicom microLaser 12.
+     - Added new driver entries "hpijs-pcl3", "hpijs-pcl5e", and "hpijs-pcl5c",
+       to generate PPD files for all non-HP printers being used with HPIJS,
+       as HPLIP does not provide PPDs for non-HP printers and foomatic-db-hpijs
+       makes HPIJS support for non-HP printers too complicated. Updated
+       recommended drivers for all affected printers.
+     - Corrected option and choice IDs in some option XML files.
+  * debian/control: Made foomatic-db-hpijs package obsolete by adding
+    appropriate Conflicts:/Replaces: entries.
+  * debian/control: Added Recommends: for all printer driver packages which get
+    their PPDs from foomatic-db.
+  * debian/foomatic-db.postinst: Let PPD files of existing queues which were
+    generated with XML data from foomatic-db-hpijs (driver entry "hpijs") be
+    replaced by PPDs from the new foomatic-db-provided driver entries
+    "hpijs-pcl3", "hpijs-pcl5e", and "hpijs-pcl5c".
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 19 Aug 2009 20:44:57 +0200
+
+foomatic-db (20090712-0ubuntu1) karmic; urgency=low
+
+  * New upstream release
+     - Added/fixed support for the HP DesignJet 30, 70, 90, 100, 100+, 110,
+       120, 130, 500, 800, 5000, 5500: Assigned the "cdnj500" driver as
+       recommended driver, added info about the unprintable margins, added
+       "InputSlot" option to select the paper source from roll (with/without
+       cut), tray, rear feed, manual feed. The driver also supports custom
+       page sizes.
+     - Fixed "Resolution" option for the "Postscript" and "Postscript1"
+       drivers: Removed the "default" choice as it is not compliant with the
+       Adobe specs and let the resolution code get inserted before the Page
+       Size code, as according to the PPD specs some printers need to set
+       the resolution before setting the page size.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 13 Jul 2009 11:58:49 +0200
+
+foomatic-db (20090617-0ubuntu2) karmic; urgency=low
+
+  * debian/control: Added dependency on cups and cups-client to assure that
+    PPDs of existing queues get updated by the postinstall scripts.
+  * debian/openprinting-ppds.postinst, debian/openprinting-ppds-extra.postinst:
+    Updated manufacturer names for automatic updates of PPDs of existing print
+    queues.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 18 Jun 2009 09:11:49 +0200
+
+foomatic-db (20090617-0ubuntu1) karmic; urgency=low
+
+  * New upstream release
+    - Many new printer models added (Fixes: LP: #10871, LP: #83960,
+      LP: #114681, LP: #121060, LP: #258058, LP: #273975, LP: #343444,
+      LP: #371737).
+    - More user-friendly UI strings for the "Print Quality" option in some
+      Brother PPD files (LP: #141487).
+    - Replaced broken PPD for the Kyocera FS-9100DN by the one for the
+      FS-9120DN (LP: #344691).
+    - Added "*cupsFilter:" lines to all PCL-XL PPD files from Ricoh and OEM
+      so that they accept PDF as input format. This assures that always the
+      most straightforward CUPS filter chain gets used and interferences
+      between filters (like LP: #361772) get avoided.
+    - Removed "Black and White" Color Mode (1 bit per pixel) from the
+      "cdj550" driver. This mode is not supported by the driver (LP: #337133).
+    - DesignJet driver assignement fixes, new "cdnj500" driver.
+    - Correction of auto-detection strings.
+    - Addition of CUPS custom option definitions to the PPDs from Ricoh
+      family and OEM.
+    - New "pxldpl" driver entry for the Dell 3010cn and Dell DPL printers
+      in general.
+  * Merge from debian unstable, remaining changes:
+    - Driver entries removed for drivers which are not shipped by Ubuntu
+    - Fixed manufacturer-supplied PPDs: "*CloseUI <option>" ->
+      "*CloseUI: <option>", "*1284DeviceId" -> "*1284DeviceID".
+    - openprinting-ppds-extra package with PPDs from Ricoh family and OEM
+      and non-English PPDs from Kyocera
+    - Linked PPD files with Foomatic database, so that links in the Foomatic
+      XML files keep working.
+    - Removed link into /usr/share/cups/model, it makes PPDs appearing
+      twice.
+    - debian/patches/bjc600-bjc800.patch: Removed workaround for Ghostscript
+      crashing when feeding bjc600/bjc800 drivers with PDF. The Ghostscript
+      shipped by Ubuntu is fixed.
+    - foomatic-filters-ppds discontinued upstream, updated debian/control
+      appropriately.
+    - foomatic-db does not make sense without foomatic-db-engine and
+      foomatic-filters, made the Recommends: a Depends:.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 17 Jun 2009 23:34:49 +0200
+
+foomatic-db (20090616-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix build problems.  (Closes: #532914)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 16 Jun 2009 23:07:01 -0500
+
+foomatic-db (20090508-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat, 09 May 2009 03:13:11 -0500
+
+foomatic-db (20090301-2) unstable; urgency=low
+
+  * Only ship PPDs in the openprinting.org-ppds package.
+  * s/hplip-ppds/hpijs-ppds/g.  (Closes: #476553)
+  * cupsys -> cups.  (Closes: #490379)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Thu, 05 Mar 2009 02:19:15 -0600
+
+foomatic-db (20090301-1) unstable; urgency=low
+
+  * New upstream release for Foomatic 4.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun, 01 Mar 2009 15:25:08 -0600
+
+foomatic-db (20090218-0ubuntu3) jaunty; urgency=low
+
+  * debian/foomatic-db.postinst, debian/openprinting-ppds.postinst,
+    debian/openprinting-ppds-extra.postinst: Silenced non-fatal error messages
+    when post-install script updates PPDs and there are PPDs not belonging to
+    a CUPS queue in /etc/cups/ppd/ (LP: #345866).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 25 Mar 2009 16:13:49 +0100
+
+foomatic-db (20090218-0ubuntu2) jaunty; urgency=low
+
+  * debian/local/apport-hook.py, debian/rules: Added apport hook (LP: #338442).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 19 Mar 2009 14:07:49 +0100
+
+foomatic-db (20090218-0ubuntu1) jaunty; urgency=low
+
+  * New upstream release
+     o Updated entries of "foo2..."-driven printers.
+     o Changed recommended driver for Samsung-CLP-300/600 to "foo2qpdl".
+     o Corrected driver assignments for the Lexmark E120, it is PCL 5e and
+       not PCL XL.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 18 Feb 2009 18:06:20 +0100
+
+foomatic-db (20090115-0ubuntu2) jaunty; urgency=low
+
+  * debian/foomatic-db.postinst, debian/openprinting-ppds.postinst,
+    debian/openprinting-ppds-extra.postinst: Let the PPD files of the
+    existing print queues get automatically updated after each installation of
+    this package.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 15 Jan 2009 12:12:26 +0100
+
+foomatic-db (20090115-0ubuntu1) jaunty; urgency=low
+
+  * New upstream release
+     o Fixed several inconsistencies, typos, and other bugs in the database.
+     o Duplex should work now for many more printers.
+     o Marked drivers "cdj670", "cdj850", "cdj880", "cdj890", "cdj970",
+       "cdj1600", "st800" , "mj6000c", and "mj8000c" obsolete.
+     o Clean-up of Oki printer entries.
+     o Added 34 Postscript and 24 pxlmono PPD files for 34 Ricoh Family Group
+       Models.
+     o Added entry for the Epson LP-M5000.
+  * debian/patches/hp-deskjet-540-540c.patch,
+    debian/patches/pxl-duplex.patch: Removed, applied upstream.
+  * debian/patches/bjc600-bjc800.patch: Removed workaround for broken
+    "bjc600"/"bjc800" drivers from the upstream XML files. The bug is fixed
+    in the Ghostscript which comes with Ubuntu and in Ghostscript 8.64 and
+    later.
+  * debian/rules: Reintroduced the driver entries which we removed in
+    20090918-0ubuntu3, as Ghostscript is fixed now.
+  * debian/docs: Removed TODO entry, as the file is not shipped any more.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 15 Jan 2009 12:12:26 +0100
+
+foomatic-db (20080918-0ubuntu4) intrepid; urgency=low
+
+  * debian/patches/bjc600-bjc800-pcl3.patch,
+    debian/patches/pcl3-device-classes.patch: Removed workaround for broken
+    "bjc600"/"bjc800" drivers from the patch. The bug in the drivers is fixed
+    now. Renamed the patch to represent its remaining content.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 20 Oct 2008 09:13:26 +0200
+
+foomatic-db (20080918-0ubuntu3) intrepid; urgency=low
+
+  * debian/patches/hp-deskjet-540-540c.patch: HP DeskJet 540 and 540C are
+    different printers.
+  * debian/patches/bjc600-bjc800-pcl3.patch: Let Ghostscript always be fed with
+    PostScript and not with PDF when using the "bjc600" or "bjc800" drivers.
+    Due to a bug in Ghostscript these two do not work with PDF as input.
+    Corrected the device class assignments of some printers in the "pcl3"
+    driver.
+  * debian/rules: Removed some driver entries of drivers which do not work
+    in the current Ghostscript.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 15 Oct 2008 09:35:26 +0200
+
+foomatic-db (20080918-0ubuntu2) intrepid; urgency=low
+
+  * debian/patches/pxl-duplex.patch: Enable Duplex option for the "pxlcolor"
+    and "pxlmono" drivers for all printers and also for the Generic PCL-XL
+    printer for all drivers (LP: #282738).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 13 Oct 2008 19:01:26 +0200
+
+foomatic-db (20080918-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+     o Fixed PPD files which do not pass cupstestppd (Upstream bug #164).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 18 Sep 2008 11:05:26 +0200
+
+foomatic-db (20080916-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+     o "*DefaultResolution: 1200dpi" line in the PPD files for "pxlmono" and
+       "pxlcolor" got dropped with the restructuring of the driver entries,
+       re-added.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 15 Sep 2008 18:59:26 +0200
+
+foomatic-db (20080915-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+     o On many PCL 6/XL color printers one could only print in grayscale.
+       Fixed the database entries for these printers (example: Xerox
+       WorkCentre 7345, LP: #259318).
+     o Set recommended driver of Xerox WorkCentre 7345 to "pxlcolor"
+       (LP: #259318).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 15 Sep 2008 17:45:00 +0200
+
+foomatic-db (20080904-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+     o Fixed generic PostScript driver to get working with the PDF workflow.
+       The driver got broken in the upstream release from August 21 and it
+       had already problems before (LP: #259318).
+     o Ricoh has fixed several problems reported by "cupstestppd" in their
+       PPDs (Upstream bug #164).
+     o Changed recommended driver for the HP Color LaserJet 35xx/36xx from
+       "pxljr" to "hpijs". The former driver has problems with some colors
+       (LP: #228635) and duplex does not work, too.
+     o Added entries for Lexmark E120 and E120n (LP: #135489), the
+       Dell 3100cn (LP: #90718), and the Okidata B4350 (LP: #203358).
+     o Fixed typos in printer model names which made some listed PPDs
+       not accessible: HP LaserJet 4345 MFP, HP Color LaserJet 9500 MFP,
+       Brother HL-2060, HP DesignJet 750, Apple 12 640ps, Ricoh Aficio 5206
+       (Red Hat bug #459847).
+     o Changed recommended driver of Brother HL-2060 to "hpijs" (Upstream
+       bug #166, Red Hat bug #292021).
+     o Fixed PPDs for the "pbm2l7k" driver (Upstream bug #167).
+     o Added IEEE 1284 device ID for Lexmark E120n (Red Hat bug #201318).
+  * debian/rules: Replace the wrong "*1284DeviceId" by "*1284DeviceID" in
+    the PPDs (Upstream bug #164).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 04 Sep 2008 16:38:03 +0200
+
+foomatic-db (20080821-0ubuntu2) intrepid; urgency=low
+
+  * debian/rules: Many manufacturer-supplied PPD files use the incorrect
+    syntax "*CloseUI <option>" instead of "*CloseUI: <option>" which makes
+    CUPS silently rejecting the PPD and simply printing raw. Fixed this
+    globally by checking and if needed correcting all PPDs (Upstream bug #164,
+    Debian bug #493104).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue,  2 Sep 2008 22:19:18 +0200
+
+foomatic-db (20080821-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+     o Made Halftoning option actually work with PDF input.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 21 Aug 2008 08:47:18 +0200
+
+foomatic-db (20080820-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+     o Replaced all PostScript-code based options by Ghostscript-command-line-
+       based ones, so that PDF can be fed directly into Ghostscript for most
+       drivers.
+     o Support for Epson LP-S7500.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 20 Aug 2008 17:37:37 +0200
+
+foomatic-db (20080814-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+    o Renamed manufacturer name "okidata" to "Oki" to conform with the
+      Adobe specifications for PPD files.
+    o The HP LaserJet 1320 works with the "pxlmono" driver (LP: #172550).
+    o Added printers from Lexmark, Toshiba, Oki, Epson, Sharp, Ricoh and
+      OEM.
+  * debian/rules: Add "*cupsFilter" line to accept PDF input data to the
+    ready-made PPDs which use foomatic-rip.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 14 Aug 2008 18:24:15 +0200
+
+foomatic-db (20080619-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release
+    o Added new printers from Ricoh and OEM, Lexmark, Xerox, Okidata, Tally,
+      Genicom, Xante, Minolta, IBM/Infoprint, Brother, Oce, Sharp, Tektronix,
+      Panasonic, Epson.
+    o Fixed auto-detection signatures for several printers.
+  * Merge from debian unstable, remaining changes:
+    o Split openprinting-ppds into openprinting-ppds and
+      openprinting-ppds-extra. openprinting-ppds-extra contains less
+      common PPDs and is not included in the Ubuntu Desktop CDs
+    o Remove driver XML entries for drivers not being part of Ubuntu
+    o Keep original ordering of the PPD files in the file system
+  * debian/control: Replaced "cupsys" by "cups | cupsys", let
+    openprinting-ppds-extra require foomatic-filters, as the Ricoh PPDs
+    need foomatic-rip.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 19 Jun 2008 10:01:00 +0100
+
+foomatic-db (20080211-2) unstable; urgency=low
+
+  * Fix conflicts for openprinting-ppds (Closes: #470148, #470120).
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun, 09 Mar 2008 23:52:31 -0500
+
+foomatic-db (20080211-1) unstable; urgency=low
+
+  * New upstream release.  (Closes: #462634)
+  * Follow upstream package name transition: linuxprinting.org-ppds is now
+    openprinting-ppds.
+  * Add info to openprinting-ppds about where to find PPDs that aren't
+    included in this package.  (Closes: #400254)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Thu, 21 Feb 2008 14:23:35 -0600
+
+foomatic-db (20080211-0ubuntu1) hardy; urgency=low
+
+  * New upstream release
+    o Fixed default settings for the "HalftoningAlgorithm" option
+      (LP: #25105).
+    o Added many new HP, Ricoh, and Epson printers.
+    o Bug fixes on the PCL-XL PPDs from Ricoh and OEMs.
+    o Removed many Uniprint driver entries because they are obsolete due
+      to Gutenprint delivering much better support for Epson inkjets.
+    o Fixed HP DesignJet entries (so downstream patch not needed any more).
+    o Added auto tray support for HP's PostScript printers.
+  * debian/patches/correct-designjet-ppds.patch: Removed, merged upstream.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 11 Feb 2008 23:12:00 +0100
+
+foomatic-db (20070919-0ubuntu3) gutsy; urgency=low
+
+  * debian/rules: Deleted entries for drivers not shipped with Ubuntu Gutsy
+    (LP: #150985).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue,  9 Oct 2007 17:26:28 +0100
+
+foomatic-db (20070919-0ubuntu2) gutsy; urgency=low
+
+  * debian/control: Added build dependency "cdbs" needed for simple-patchsys.mk
+    to avoid FTBFS on build server.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 19 Sep 2007 21:26:28 +0100
+
+foomatic-db (20070919-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release
+    o Added 27 Ricoh Postscript PPDs.
+    o Let the Epson AcuLaser C1900 use the driver for the C2000, otherwise
+      it prints only in BW (LP: #132894).
+  * debian/patches/correct-designjet-ppds.patch, debian/rules: Fixed some
+    HP DesignJet PPD files to let the DesignJets appear under the manufacturer
+    "HP" and not under "DesignJet".
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 19 Sep 2007 21:26:28 +0100
+
+foomatic-db (20070813-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release
+    o Added new HP printers supported by HPLIP 2.7.7.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 13 Aug 2007 11:53:18 +0100
+
+foomatic-db (20070719-0ubuntu1) gutsy; urgency=low
+
+  * New upstream release
+    o Added possibility to mark drivers as not compatible with the Postscript
+      code for CUPS' page accounting which foomatic-rip inserts into the
+      datastream. "Postscript" is the first driver marked as such. This will
+      allow to reactivate the code insertion for CUPS' page accounting by
+      default (bug LP#126139)
+    o Added many new printer entries and PPDs: Ricoh, HP, Konica Minolta, ...
+    o Reorganized HP's PPDs without subdirectories
+    o Replaced "Gimp-Print" by "Gutenprint" in README and configure.ac
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 19 Jul 2007 18:36:04 +0100
+
+foomatic-db (20070327-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    o Added new HP printers: HP OfficeJet J5700, OfficeJet Pro K5300, K5400,
+      L7300, L7500, L7600, L7700.
+    o Corrected manufacturer name "KONICA MINOLTA".
+    o Fixed entry for "lxm3200-tweaked" driver.
+  * Do not do Debian's rearranging of the PPD files in the /usr/share/ppd
+    directory. Otherwise the Foomatic tools do not find the PPDs when they
+    follow the links in the printer XML files (closes: LP#92625).
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue, 27 Mar 2007 12:06:05 +0100
+
+foomatic-db (20070207-0ubuntu3) feisty; urgency=low
+
+  * debian/control:
+    - Make the Conflicts/Replaces to the old linuxprinting* packages versioned
+     (<< 20070207-0ubuntu1).
+    - Adapt Maintainer field (debian-maintainer-field spec).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 14 Feb 2007 10:30:48 +0100
+
+foomatic-db (20070207-0ubuntu2) feisty; urgency=low
+
+  * Added transitional linuxprinting.org-* packages to pull in the new
+    openprinting-* packages on a dist-upgrade
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu,  8 Feb 2007 18:30:12 +0000
+
+foomatic-db (20070207-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    o Added HP Color LaserJet CP4005, HP LaserJet M3027 MFP, and
+      HP LaserJet M5025 MFP
+    o Let the HP LaserJet 1300 and 1320 use PCL instead of PostScript by
+      default. In PostScript these printers are very slow.
+  * Renamed the packages linuxprinting.org-ppds and
+    linuxprinting.org-ppds-extra into openprinting-ppds and
+    openprinting-ppds-extra
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu,  8 Feb 2007 10:30:12 +0000
+
+foomatic-db (20070117-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    o Removed execution data of drivers where this data is shipped with the
+      driver package: epsonepl, foo2hp, foo2kyo, foo2zjs, lz11-V2, ptouch
+    o New driver entries: foo2lava, foo2xqx, pxljr
+    o Drivers marked obsolete: pbm2ppa, pbm2zjs, ppmtocpva, pxl1010
+    o 17 new Ricoh family and OEM printer entries
+    o 3 more new printer entries
+    o More auto-detection info from Tim Waugh from Red Hat
+  * New site name: linuxprinting.org --> OpenPrinting
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 17 Jan 2007 22:21:05 +0000
+
+foomatic-db (20061219-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    o Added advanced options (duplex, tray selection, paper type, economy
+      mode, "HQ1200"/2400x600 dpi resolution, and password-protected
+      printing) for the "hl7x0" driver (Brother host-based printing).
+    o Marked driver entry "drv_z42" obsolete (driver not maintained
+      upstream any more, replaced by Gutenprint).
+    o Samsung ML-1610 does not support PostScript.
+    o A lot of printer auto-detection data (device IDs) contributed by
+      Tim Waugh from Red Hat.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Tue, 19 Dec 2006 19:22:26 +0100
+
+foomatic-db (20061122-0ubuntu1) feisty; urgency=low
+
+  * New upstream release
+    o Let driver XML files for obsolete drivers and for drivers empty
+      command line prototype be removed (Closes: LP#19437)
+    o Added "Default" setting to "InputSlot" option of the PPD for the HP
+      LaserJet 6MP (Closes LP#49805)
+    o Fixed syntax errors in PPDs for HP LaserJet 4240, 4250, 4350,
+      DesignJet 5000, 5500 (Closes LP#64238)
+    o Changed default driver for the Samsung ML-1750 to "ljet4", as
+      "pxlmono" is not reliable with this model (Closes: LP#70425)
+    o Fixed PPD file link in netry for HP LaserJet 4M
+    o Added information about unprintable margins to HP LaserJet 5L
+    o Changed recommended driver of HP LaserJet 3200 to "pxlmono",
+      PostScript is an optional add-on for this printer.
+    o Fixed PostScript "magic string" in command line prototype of
+      "Postscript" printer entry, to make printer language auto-
+      detection by the printer more reliable.
+    o Added 6 new HP printers: HP LaserJet P2015, M3035 MFP, M5035 MFP,
+      M4345 MFP, P3004, P3005
+    o Marked all Ricoh family and OEM (Ricoh, Lanier, Savin, Gestetner,
+      NRG, Infotec) printers as supporting PJL
+    o Fixes on Toshiba and HP printer entries
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Thu, 23 Nov 2006 10:44:50 +0100
+
+foomatic-db (20061031-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat,  4 Nov 2006 19:27:41 -0600
+
+foomatic-db (20060918-0ubuntu3) edgy; urgency=low
+
+  * Splitted linuxprinting.org-ppds into
+    linuxprinting.org-ppds (most commonly needed PPDs) and
+    linuxprinting.org-ppds-extra (PPDs for less common printers). This
+    is done to save space on the live/installation CD.
+  * Remove link into /usr/share/cups/model, it makes PPDs appearing twice.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Mon, 25 Sep 2006 15:53:08 +0200
+
+foomatic-db (20060918-0ubuntu2) edgy; urgency=low
+
+  * Removed dependency of foomatic-db on linuxprinting.org-ppds.
+  * Moved link for the PPDs to appear in the Foomatic database
+    to the linuxprinting.org-ppds package.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Fri, 22 Sep 2006 13:53:08 +0200
+
+foomatic-db (20060918-0ubuntu1) edgy; urgency=low
+
+  * New upstream release
+  * debian/rules: Fixed "make install" call, using DESTDIR
+  * Let foomatic-db require the linuxprinting.org-ppds package
+  * Link PPD directory structure into /usr/share/foomatic tree
+    so that foomatic-gui works correctly with manufacturer PPDs
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>  Wed, 20 Sep 2006 13:53:08 +0200
+
+foomatic-db (20060822-1) unstable; urgency=low
+
+  * New upstream release.
+  * Move PPDs yet again.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 22 Aug 2006 14:04:13 -0500
+
+foomatic-db (20060712-2) unstable; urgency=low
+
+  * Remove the gimp-print.xml and gutenprint.xml files from the installed
+    database.  (Closes: #370503)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon, 21 Aug 2006 02:09:28 -0500
+
+foomatic-db (20060712-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed, 12 Jul 2006 20:22:59 -0400
+
+foomatic-db (20060530-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 30 May 2006 20:06:56 -0400
+
+foomatic-db (20060408-1) unstable; urgency=low
+
+  * New upstream release.
+  * Suggest hpijs-ppds instead of hplip-ppds.  (Closes: #361126)
+  * New database seems to be missing whatever problem was causing the
+    double-free bug in foomatic-configure and friends.
+    (Closes: #360785, #360787)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat,  8 Apr 2006 05:01:31 -0400
+
+foomatic-db (20060318-1) unstable; urgency=low
+
+  * New upstream release.
+  * s/gimp-print/gutenprint/ throughout.
+  * Dump PPDs in /usr/share/ppd/linuxprinting.org-postscript instead of
+    /usr/share/ppd/postscript, per changes to Debian layout.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat, 18 Mar 2006 23:07:01 -0500
+
+foomatic-db (20060113-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now includes free manufacturer PPD files from linuxprinting.org;
+    includes hardlinks to locations in proposed PPD File Structure
+    Specification (http://wiki.debian.org/PpdFileStructureSpecification).
+
+ -- Chris Lawrence <lawrencc@debian.org>  Fri, 13 Jan 2006 17:35:55 -0500
+
+foomatic-db (20050720-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove mention of foomatic-bin from README.Debian.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed, 20 Jul 2005 02:56:25 -0500
+
+foomatic-db (20050705-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue,  5 Jul 2005 01:39:40 -0500
+
+foomatic-db (20050420-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed, 20 Apr 2005 14:30:29 -0500
+
+foomatic-db (20050403-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun,  3 Apr 2005 22:56:05 -0500
+
+foomatic-db (20050218-1) unstable; urgency=low
+
+  * New upstream release.
+  * Includes execution information for foo2zjs-wrapper.  (Closes: #295724)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Thu, 17 Feb 2005 23:59:12 -0600
+
+foomatic-db (20050118-1) unstable; urgency=low
+
+  * New upstream release.
+  * Adds entry for Epson Stylus C86.  (Closes: #289256)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 18 Jan 2005 16:00:25 -0600
+
+foomatic-db (20050114-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Fri, 14 Jan 2005 23:05:46 -0600
+
+foomatic-db (20041203-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Fri,  3 Dec 2004 03:18:08 -0600
+
+foomatic-db (20041106-2) unstable; urgency=low
+
+  * Add contributed autodetect information for:
+      Epson Stylus C84
+      Epson Stylus Photo 890
+      Epson Stylus Photo RX500
+      HP DeskJet 950C
+      HP DeskJet 980C
+      HP DeskJet 3420
+      HP LaserJet 1010
+      Lexmark 5700
+      Samsung ML-1510
+  * Correct autodetect information for HP DeskJet 656C
+
+ -- Chris Lawrence <lawrencc@debian.org>  Fri,  3 Dec 2004 03:15:30 -0600
+
+foomatic-db (20041106-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat,  6 Nov 2004 21:00:31 -0600
+
+foomatic-db (20041025-2) unstable; urgency=low
+
+  * Add/update Postscript PPD URLs for mono HP LaserJet series printers.
+  * Add contributed autodetect information for:
+      HP Business Inkjet 1100 (USB interface)
+      HP DeskJet 945C
+      HP PSC 2355 (USB interface)
+      Samsung ML-1430
+  * Fix autodetect information for HP DeskJet 930C.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat,  6 Nov 2004 20:55:45 -0600
+
+foomatic-db (20041025-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon, 25 Oct 2004 06:30:12 -0500
+
+foomatic-db (20041019-2) unstable; urgency=low
+
+  * Add contributed autodetect info for:
+      HP Color LaserJet 2550 series
+      HP DeskJet 820C
+      HP LaserJet 1000
+      HP LaserJet 1300
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon, 25 Oct 2004 06:13:19 -0500
+
+foomatic-db (20041019-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 19 Oct 2004 00:49:30 -0500
+
+foomatic-db (20041013-3) unstable; urgency=low
+
+  * Add autodetect info for HP DeskJet 920C.  (Closes: #277163)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 19 Oct 2004 00:47:49 -0500
+
+foomatic-db (20041013-2) unstable; urgency=low
+
+  * Add autodetect info for Epson Stylus C80.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat, 16 Oct 2004 13:22:43 -0500
+
+foomatic-db (20041013-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added new autodetect information for LaserJet 1200, DeskJet 3820,
+    Stylus Color 777, Stylus Color 480SXU, and DeskJet 3650, contributed
+    by printconf users.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed, 13 Oct 2004 04:10:22 -0500
+
+foomatic-db (20040914-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump urgency slightly as this adds numerous fixes to existing printer
+    descriptions.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 14 Sep 2004 20:43:40 -0500
+
+foomatic-db (20040705-1) unstable; urgency=low
+
+  * New upstream release.
+    + HP URLs corrected.  (Closes: #256118)
+  * Autodetection for Canon S600 and HP DeskJet 1000C added.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon,  5 Jul 2004 16:16:18 -0500
+
+foomatic-db (20040621-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon, 21 Jun 2004 01:57:13 -0500
+
+foomatic-db (20040614-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon, 14 Jun 2004 02:12:59 -0500
+
+foomatic-db (20040506-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Thu,  6 May 2004 22:54:36 -0500
+
+foomatic-db (20040303-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed,  3 Mar 2004 13:10:40 -0600
+
+foomatic-db (20040220-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Fri, 20 Feb 2004 22:19:47 -0600
+
+foomatic-db (20040203-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue,  3 Feb 2004 20:06:55 -0600
+
+foomatic-db (20040114-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed, 14 Jan 2004 22:26:56 -0600
+
+foomatic-db (20031207-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun,  7 Dec 2003 21:24:00 -0600
+
+foomatic-db (20031118-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 18 Nov 2003 15:14:45 -0600
+
+foomatic-db (20031008-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix more problems with Postscript.xml and dash.  (Closes: #214668)
+    Thanks to Arndt Schoenewald for his patch.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed,  8 Oct 2003 03:00:02 -0500
+
+foomatic-db (20030929-1) unstable; urgency=low
+
+  * New upstream release.
+  * (Hopefully) fix bashism in db/source/driver/Postscript.xml.
+    Unfortunately, fixing this in foomatic-filters-ppds will have to wait
+    for upstream.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon, 29 Sep 2003 09:18:51 -0500
+
+foomatic-db (20030907-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun,  7 Sep 2003 12:02:01 -0500
+
+foomatic-db (20030702-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed,  2 Jul 2003 23:04:20 -0500
+
+foomatic-db (20030628-1) unstable; urgency=low
+
+  * New upstream release.
+  * Adds more HP multifunction devices (OfficeJet 4110, PSC 2175).
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat, 28 Jun 2003 17:09:32 -0500
+
+foomatic-db (20030606-1) unstable; urgency=low
+
+  * New upstream release.
+    + Updated foo2zjs drivers (compatible with foo2zjs-20030531).
+  * Suggest foo2zjs, since it's now in unstable.
+  * Cleaned up the description.
+  * Uploaded to DELAYED so foomatic 3.x will finally make it into testing.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Fri,  6 Jun 2003 23:13:45 -0500
+
+foomatic-db (20030527-1) unstable; urgency=low
+
+  * New upstream release.
+    + Improved support for various HP printers.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 27 May 2003 15:42:06 -0500
+
+foomatic-db (20030509-1) unstable; urgency=low
+
+  * New upstream release.
+    + More HP Printers: LaserJet 1005, 1150, 1500, 1300, 2300.
+    + Generic PCL 5 and PCL 5e printers separated.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Fri,  9 May 2003 14:30:33 -0500
+
+foomatic-db (20030503-3) unstable; urgency=low
+
+  * Uh... correct the USB autodetection info for the Canon BJC-21x0.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun,  4 May 2003 06:42:57 -0500
+
+foomatic-db (20030503-2) unstable; urgency=low
+
+  * Add USB autodetection information for the Canon BJC-2100/2110.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun,  4 May 2003 06:22:59 -0500
+
+foomatic-db (20030503-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sat,  3 May 2003 23:07:09 -0500
+
+foomatic-db (20030429-1) unstable; urgency=low
+
+  * New upstream release.
+    + Improvements in the generic IBM dot matrix and Minolta/QMS entries.
+      (Full details in the upstream changelog.)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 29 Apr 2003 17:15:26 -0500
+
+foomatic-db (20030423-2) unstable; urgency=low
+
+  * Upgrade foomatic-db-engine to a dependency.
+  * Add foomatic-db-gimp-print as a suggestion.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Thu, 24 Apr 2003 14:32:52 -0500
+
+foomatic-db (20030423-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Wed, 23 Apr 2003 19:27:55 -0500
+
+foomatic-db (20030413-1) unstable; urgency=low
+
+  * Initial separate release.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun, 13 Apr 2003 21:17:02 -0500
