@@ -1,3 +1,287 @@
+2022-08-29 Ryuta Michikami <zjp_chrome_linux_printerdriver@jp.ricoh.com>
+      *added
+        db/source/PPD/Gestetner/PS/Gestetner-IM_CW2200_PS.ppd
+        db/source/PPD/Gestetner/PDF/Gestetner-IM_CW2200_PDF.ppd
+        db/source/printer/Gestetner-IM_CW2200.xml
+        db/Lanier/PS/Lanier-IM_CW2200_PS.ppd
+        db/Lanier/PDF/Lanier-IM_CW2200_PDF.ppd
+        db/source/printer/Lanier-IM_CW2200.xml
+        db/NRG/PS/NRG-IM_CW2200_PS.ppd
+        db/NRG/PDF/NRG-IM_CW2200_PDF.ppd
+        db/source/printer/NRG-IM_CW2200.xml
+        db/Ricoh/PS/Ricoh-IM_CW2200_PS.ppd
+        db/Ricoh/PDF/Ricoh-IM_CW2200_PDF.ppd
+        db/source/printer/Ricoh-IM_CW2200.xml
+        db/Savin/PS/Savin-IM_CW2200_PS.ppd
+        db/Savin/PDF/Savin-IM_CW2200_PDF.ppd
+        db/source/printer/Savin-IM_CW2200.xml
+        db/Ricoh/Color/Ricoh-IM_CW1200_JPN.ppd
+        db/source/printer/Ricoh-IM_CW1200_JPN.xml
+        db/Ricoh/Color/Ricoh-IM_CW2200_JPN.ppd
+        db/source/printer/Ricoh-IM_CW2200_JPN.xml
+        db/Ricoh/Color/Ricoh-IP_C6020M_JPN.ppd
+        db/source/printer/Ricoh-IP_C6020M_JPN.xml
+        db/Ricoh/Color/Ricoh-IP_C6020_JPN.ppd
+        db/source/printer/Ricoh-IP_C6020_JPN.xml
+        db/Ricoh/Color/Ricoh-P_C6010M_JPN.ppd
+        db/source/printer/Ricoh-P_C6010M_JPN.xml
+        db/Ricoh/Color/Ricoh-P_C6010_JPN.ppd
+        db/source/printer/Ricoh-P_C6010_JPN.xml
+
+2022-03-27  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/PPD/Utax/: Added PostScript PPDs for Utax
+	TA2506ci, TA301ci, TA3206ci, TA3262i, TA356ci, TA4006ci, TA4056i,
+	TA4062i, TA5006ci, TA5056i, TA6006ci, TA6056i, TAP-4531 MFP,
+	TAP-4531i MFP, TAP-4536 MFP, TAP-4536i MFP, TAP-5536i MFP,
+	TAP-6036i MFP, TAPC3062DN, TAPC3062i MFP, TAPC3066i MFP,
+	TAPC3562DN, TAPC3562i MFP, TAPC3566i MFP, TAPC4072DN.
+	Also included PPD files of some other models, but they ask for
+	proprietary filters via "*cupsFilter:" lines and most probably
+	do not work without these filters. Therefore they are separated
+	in the db/maybe_broken/.
+	(PPD files MIT-licensed, PR #25).
+
+2022-01-26  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/printer/Dell-1355.xml,
+	db/source/printer/Dell-C1765.xml,
+	db/source/printer/Epson-AcuLaser_CX17NF.xml,
+	db/source/printer/Epson-AcuLaser_M1400.xml,
+	db/source/printer/Fuji_Xerox-DocuPrint_CM205.xml,
+	db/source/printer/Fuji_Xerox-DocuPrint_CM215.xml,
+	db/source/printer/Fuji_Xerox-DocuPrint_M215.xml,
+	db/source/printer/Fuji_Xerox-DocuPrint_P205.xml,
+	db/source/printer/Xerox-Phaser_3010.xml,
+	db/source/printer/Xerox-Phaser_3040.xml,
+	db/source/printer/Xerox-WorkCentre_3045.xml,
+	db/source/printer/Xerox-WorkCentre_6015.xml: Corrected
+	<functionality> from C to B, B is "mostly", C does not
+	exist.
+
+	db/source/driver/pcl5-Ricoh.xml: Corrected driver execution type
+	from the wrong "pcl5" to "cups" (we use the CUPS Raster driver
+	for PCL 5c/e here).
+
+2022-01-12  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/PPD/Utax/: Added PostScript PPDs for Utax
+	TA350ci, TA350ci, TA350ci (MIT-licensed, PR #24).
+
+2021-11-16  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/driver/pentaxpj.xml,
+	db/source/driver/ppmtomd.xml,
+	db/source/driver/slap.xml: Updated links to upstream source code.
+
+	db/source/printer/Brother-HL-2130.xml: Added Brother HL-2130.
+
+2021-10-21  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/driver/brlaser.xml,
+	db/source/driver/c2esp.xml,
+	db/source/driver/foo2hbpl2.xml,
+	db/source/driver/foo2hiperc-z1.xml,
+	db/source/driver/foo2hiperc.xml,
+	db/source/driver/foo2hp.xml,
+	db/source/driver/foo2lava.xml,
+	db/source/driver/foo2oak-z1.xml,
+	db/source/driver/foo2oak.xml,
+	db/source/driver/foo2qpdl.xml,
+	db/source/driver/foo2slx.xml,
+	db/source/driver/foo2xqx.xml,
+	db/source/driver/foo2zjs-z1.xml,
+	db/source/driver/foo2zjs-z2.xml,
+	db/source/driver/foo2zjs-z3.xml,
+	db/source/driver/foo2zjs.xml,
+	db/source/driver/m2300w.xml,
+	db/source/driver/ptouch.xml,
+	db/source/driver/pxljr.xml,
+	db/source/driver/rastertosag-gdi.xml,
+	db/source/driver/splix.xml: Added Snap Store link to
+	Ghostscript Printer Application as these drivers are now also
+	available in this Printer Application.
+
+2021-10-05  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/driver/Postscript-Brother.xml,
+	db/source/driver/Postscript-Canon.xml,
+	db/source/driver/Postscript-Epson.xml,
+	db/source/driver/Postscript-Gestetner.xml,
+	db/source/driver/Postscript-HP.xml,
+	db/source/driver/Postscript-InfoPrint.xml,
+	db/source/driver/Postscript-Infotec.xml,
+	db/source/driver/Postscript-KONICA_MINOLTA.xml,
+	db/source/driver/Postscript-Kyocera.xml,
+	db/source/driver/Postscript-Lanier.xml,
+	db/source/driver/Postscript-Lexmark.xml,
+	db/source/driver/Postscript-NRG.xml,
+	db/source/driver/Postscript-Oce.xml,
+	db/source/driver/Postscript-Oki.xml,
+	db/source/driver/Postscript-Ricoh.xml,
+	db/source/driver/Postscript-Samsung.xml,
+	db/source/driver/Postscript-Savin.xml,
+	db/source/driver/Postscript-Sharp.xml,
+	db/source/driver/Postscript-Toshiba.xml,
+	db/source/driver/PostscriptMono-Ricoh.xml,
+	db/source/driver/PostscriptColor-Ricoh.xml,
+	db/source/driver/Postscript2-Oce.xml: Added Snap Store link to
+	PostScript Printer Application.
+
+2021-10-05  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/driver/gutenprint.xml: Added Snap Store link to
+	Gutenprint Printer Application.
+
+2021-10-05  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/driver/hplip.xml: Added Snap Store link to HPLIP Printer
+	Application and updated the comments and web site links.
+
+2021-10-05  Till Kamppeter <till.kamppeter@gmail.com>
+
+	db/source/driver/PDF-Gestetner.xml,
+	db/source/driver/PDF-Infotec.xml,
+	db/source/driver/PDF-Lanier.xml,
+	db/source/driver/PDF-NRG.xml,
+	db/source/driver/PDF-Ricoh.xml,
+	db/source/driver/PDF-Savin.xml,
+	db/source/driver/Postscript.xml,
+	db/source/driver/Postscript1.xml,
+	db/source/driver/ap3250.xml,
+	db/source/driver/appledmp.xml,
+	db/source/driver/bj10.xml,
+	db/source/driver/bj10e.xml,
+	db/source/driver/bj10v.xml,
+	db/source/driver/bj10vh.xml,
+	db/source/driver/bj200.xml,
+	db/source/driver/bj8XXYYZ.upp.xml,
+	db/source/driver/bjc250gs.xml,
+	db/source/driver/bjc600.xml,
+	db/source/driver/bjc800.xml,
+	db/source/driver/bjc880j.xml,
+	db/source/driver/c2050.xml,
+	db/source/driver/cdj500.xml,
+	db/source/driver/cdj550.xml,
+	db/source/driver/cdnj500.xml,
+	db/source/driver/chp2200.xml,
+	db/source/driver/cjet.xml,
+	db/source/driver/cljet5.xml,
+	db/source/driver/cp50.xml,
+	db/source/driver/declj250.xml,
+	db/source/driver/deskjet.xml,
+	db/source/driver/dj505j.xml,
+	db/source/driver/djet500.xml,
+	db/source/driver/dnj650c.xml,
+	db/source/driver/eplaser-jp.xml,
+	db/source/driver/eplaser.xml,
+	db/source/driver/eps9high.xml,
+	db/source/driver/eps9mid.xml,
+	db/source/driver/epson.xml,
+	db/source/driver/epsonc.xml,
+	db/source/driver/escpage.xml,
+	db/source/driver/fmlbp.xml,
+	db/source/driver/fmpr.xml,
+	db/source/driver/gdi.xml,
+	db/source/driver/hl1250.xml,
+	db/source/driver/hl7x0.xml,
+	db/source/driver/hpijs-pcl3.xml,
+	db/source/driver/hpijs-pcl5c.xml,
+	db/source/driver/hpijs-pcl5e.xml,
+	db/source/driver/ibmpro.xml,
+	db/source/driver/imagen.xml,
+	db/source/driver/iwhi.xml,
+	db/source/driver/jetp3852.xml,
+	db/source/driver/jj100.xml,
+	db/source/driver/la50.xml,
+	db/source/driver/la70.xml,
+	db/source/driver/la75.xml,
+	db/source/driver/la75plus.xml,
+	db/source/driver/laserjet.xml,
+	db/source/driver/lbp310.xml,
+	db/source/driver/lbp320.xml,
+	db/source/driver/lbp8.xml,
+	db/source/driver/lex5700.xml,
+	db/source/driver/lex7000.xml,
+	db/source/driver/lips2p.xml,
+	db/source/driver/lips3.xml,
+	db/source/driver/lips4.xml,
+	db/source/driver/lips4v.xml,
+	db/source/driver/lj250.xml,
+	db/source/driver/lj4dith.xml,
+	db/source/driver/lj4dithp.xml,
+	db/source/driver/lj5gray.xml,
+	db/source/driver/ljet2p.xml,
+	db/source/driver/ljet3.xml,
+	db/source/driver/ljet3d.xml,
+	db/source/driver/ljet4.xml,
+	db/source/driver/ljet4d.xml,
+	db/source/driver/ljetplus.xml,
+	db/source/driver/ln03.xml,
+	db/source/driver/lp2000.xml,
+	db/source/driver/lp2563.xml,
+	db/source/driver/lp8000.xml,
+	db/source/driver/lq850.xml,
+	db/source/driver/lxm3200-tweaked.xml,
+	db/source/driver/lxm5700m.xml,
+	db/source/driver/m8510.xml,
+	db/source/driver/md1xMono.xml,
+	db/source/driver/md2k.xml,
+	db/source/driver/md50Eco.xml,
+	db/source/driver/md50Mono.xml,
+	db/source/driver/md5k.xml,
+	db/source/driver/min12xxw.xml,
+	db/source/driver/mj700v2c.xml,
+	db/source/driver/ml600.xml,
+	db/source/driver/necp2xX.upp.xml,
+	db/source/driver/necp6.xml,
+	db/source/driver/npdl.xml,
+	db/source/driver/oce9050.xml,
+	db/source/driver/oki182.xml,
+	db/source/driver/oki4w.xml,
+	db/source/driver/okiibm.xml,
+	db/source/driver/paintjet.xml,
+	db/source/driver/pcl3.xml,
+	db/source/driver/pcl5-Ricoh.xml,
+	db/source/driver/picty180.xml,
+	db/source/driver/pj.xml,
+	db/source/driver/pjetxl.xml,
+	db/source/driver/pjxl.xml,
+	db/source/driver/pjxl300.xml,
+	db/source/driver/pnm2ppa.xml,
+	db/source/driver/pr150.xml,
+	db/source/driver/pr201.xml,
+	db/source/driver/pxlcolor-Gestetner.xml,
+	db/source/driver/pxlcolor-InfoPrint.xml,
+	db/source/driver/pxlcolor-Infotec.xml,
+	db/source/driver/pxlcolor-Lanier.xml,
+	db/source/driver/pxlcolor-NRG.xml,
+	db/source/driver/pxlcolor-Ricoh.xml,
+	db/source/driver/pxlcolor-Samsung.xml,
+	db/source/driver/pxlcolor-Savin.xml,
+	db/source/driver/pxlcolor.xml,
+	db/source/driver/pxldpl.xml,
+	db/source/driver/pxlmono-Gestetner.xml,
+	db/source/driver/pxlmono-InfoPrint.xml,
+	db/source/driver/pxlmono-Infotec.xml,
+	db/source/driver/pxlmono-Lanier.xml,
+	db/source/driver/pxlmono-NRG.xml,
+	db/source/driver/pxlmono-Ricoh.xml,
+	db/source/driver/pxlmono-Samsung.xml,
+	db/source/driver/pxlmono-Savin.xml,
+	db/source/driver/pxlmono.xml,
+	db/source/driver/r4081.xml,
+	db/source/driver/rpdl.xml,
+	db/source/driver/sharp.upp.xml,
+	db/source/driver/sipixa6.upp.xml,
+	db/source/driver/sj48.xml,
+	db/source/driver/stcolor.xml,
+	db/source/driver/t4693dX.xml,
+	db/source/driver/tek4696.xml,
+	db/source/driver/xes.xml: Added Snap Store link to
+	Ghostscript Printer Application as these drivers are available
+	in this Printer Application.
+
 2021-08-23 JiangJunlan <Jiang.Junlan@cn.ricoh.com>
       *added
         db/source/PPD/Ricoh/PS/Ricoh-IM_2500_JPN.ppd,

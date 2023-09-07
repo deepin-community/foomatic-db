@@ -2,10 +2,11 @@ Source: foomatic-db
 Maintainer: Debian Printing Group <debian-printing@lists.debian.org>
 Uploaders:
  Till Kamppeter <till.kamppeter@gmail.com>,
+ Thorsten Alteholz <debian@alteholz.de>,
 Section: text
 Priority: optional
 Build-Depends:
- debhelper-compat (= 12),
+ debhelper-compat (= 13),
  foomatic-db-engine,
  pyppd,
 Standards-Version: 4.6.0
