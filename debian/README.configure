@@ -1,0 +1,14 @@
+HowTo configure your printer:
+
+# lpinfo -m | grep 1320 | grep -i postscript
+foomatic:HP-LaserJet_1320-Postscript.ppd HP LaserJet 1320 Foomatic/Postscript
+lsb/usr/hplip/HP/hp-laserjet_1320n-ps.ppd HP LaserJet 1320 series Postscript (recommended)
+# lpadmin -p lj -E -v parallel:/dev/lp0 \
+    -m lsb/usr/hplip/HP/hp-laserjet_1320n-ps.ppd \
+    -D "HP LaserJet 1320"
+# lpoptions -p lj -o media=A4 -o sides=two-sided-long-edge
+# lpadmin -d lj
+
+
+Please have a look at #590163 for more information.
+(https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=590163)

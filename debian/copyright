@@ -371,7 +371,7 @@ License: Expat
 
 Files: db/source/driver/Postscript-Lexmark.xml
 Copyright: 2008, Lexmark International, Inc.
-License: BSD~unspecified
+License: BSDunspecified
 
 Files: db/source/driver/c2esp.xml
   db/source/driver/gdi.xml
@@ -384,7 +384,7 @@ Files: db/source/driver/hpijs-pcl3.xml
   db/source/driver/hpijs-pcl5c.xml
   db/source/driver/hpijs-pcl5e.xml
 Copyright: 2010, Hewlett-Packard
-License: BSD~unspecified
+License: BSDunspecified
 
 Files: db/source/printer/Oki-B4600.xml
 Copyright: 2006, Oki Data Corporation</description>
@@ -400,7 +400,7 @@ Files: debian/ubuntu/*
 Copyright: 2009, Canonical Ltd.
 License: GPL-2
 
-License: BSD~unspecified
+License: BSDunspecified
  Redistribution of this file, with or without modification, is permitted
  provided that the following conditions are met:
  .

@@ -1,3 +1,27 @@
+foomatic-db (20230202-1) unstable; urgency=medium
+
+  * New upstream version 20230202
+  * add README.configure for example configuration of printer
+    (Closes: #590163)
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 04 Feb 2023 23:03:02 +0100
+
+foomatic-db (20230107-1) unstable; urgency=medium
+
+  * New upstream version 20230107
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 08 Jan 2023 22:03:02 +0100
+
+foomatic-db (20220223-1) unstable; urgency=medium
+
+  * New upstream version 20220223
+  * debian/control: Add myself to Uploaders:
+  * debian/control: use dh13
+  * debian/coypright: fix BSD license name
+  * debian/copyright: lintian seems to have a problem with hyphens
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 27 Mar 2022 11:03:02 +0200
+
 foomatic-db (20210824-1) unstable; urgency=medium
 
   * New upstream version 20210824
