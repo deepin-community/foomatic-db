@@ -1,3 +1,9 @@
+foomatic-db (20250819-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 20 Aug 2025 13:43:47 +0200
+
 foomatic-db (20230202-1) unstable; urgency=medium
 
   * New upstream version 20230202

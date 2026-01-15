@@ -49,7 +49,7 @@ override_dh_install:
 	# Pre-build PPD files for foomatic-db-compressed-ppds
 	FOOMATICDB=$(CURDIR)/debian/foomatic-db/usr/share/foomatic foomatic-compiledb -j $(NUMJOBS) -t ppd -d $(CURDIR)/debian/foomatic-db-compressed-ppds/usr/share/ppd/foomatic-ppd `ls -1 $(CURDIR)/debian/foomatic-db/usr/share/foomatic/db/source/driver/*.xml | perl -p -e 's:^.*db/source/driver/(\S*)\.xml\s*$$:\1\n:'`
 
-	dh_pyppd -popenprinting-ppds
+	-dh_pyppd -popenprinting-ppds
 	dh_pyppd -pfoomatic-db-compressed-ppds
 
 	# Install the ppd-updater files
