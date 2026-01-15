@@ -394,6 +394,7 @@ Files: debian/*
 Copyright: 2010-2019, Didier Raboud <odyx@debian.org>
   2010-2016, Till Kamppeter <till.kamppeter@gmail.com>
   2005-2009, Chris Lawrence <lawrencc@debian.org>
+  2022-2025, Thorsten Alteholz <debian@alteholz.de>
 License: GPL-2
 
 Files: debian/ubuntu/*
@@ -404,13 +405,13 @@ License: BSDunspecified
  Redistribution of this file, with or without modification, is permitted
  provided that the following conditions are met:
  .
-  	Redistributions of this file must reproduce the above copyright notice,
- 	this list of conditions and the following disclaimer in the file and
- 	documentation and/or other materials provided with the distribution.
+  Redistributions of this file must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the file and
+  documentation and/or other materials provided with the distribution.
  .
- 	Neither the name of Lexmark International, Inc. nor the names of its
- 	contributors may be used to endorse or promote products derived
- 	from this file without specific prior written permission.
+  Neither the name of Lexmark International, Inc. nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this file without specific prior written permission.
  .
  THIS FILE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED

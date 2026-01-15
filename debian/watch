@@ -1,2 +1,2 @@
 version=4
-https://www.openprinting.org/download/foomatic/ foomatic-db-4.0-(\d+)\.tar\.xz
+https://www.openprinting.org/download/foomatic/ foomatic-db-4.0-(\d+)\.tar\.xz debian uupdate

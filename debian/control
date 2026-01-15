@@ -9,10 +9,11 @@ Build-Depends:
  debhelper-compat (= 13),
  foomatic-db-engine,
  pyppd,
-Standards-Version: 4.6.0
+Standards-Version: 4.7.2
 Vcs-Browser: https://salsa.debian.org/printing-team/foomatic-db
 Vcs-Git: https://salsa.debian.org/printing-team/foomatic-db.git
 Homepage: https://www.openprinting.org/
+Rules-Requires-Root: binary-targets
 
 Package: foomatic-db
 Architecture: all
