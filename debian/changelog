@@ -1,3 +1,10 @@
+foomatic-db (20250819-1deepin1) unstable; urgency=medium
+
+  * update changelog, Because there are duplicate versions in the driver
+    repository.
+
+ -- lichenggang <lichenggang@deepin.org>  Tue, 20 Jan 2026 13:54:15 +0800
+
 foomatic-db (20250819-1) unstable; urgency=medium
 
   * New upstream release.
